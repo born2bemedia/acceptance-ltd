@@ -8,10 +8,10 @@ const IndustriesHero = () => {
     <section className="industries-hero">
       <div className="industries-hero__inner container">
         <div className="industries-hero__top">
-          <h1>Comprehensive Expertise Across Leading Industries</h1>
+          <h1 className="fadeInUp">Comprehensive Expertise Across Leading Industries</h1>
 
           <div className="content">
-            <p>
+            <p className="fadeInUp">
               Specialised solutions tailored to the unique challenges of diverse
               industries. From consulting and marketing to IT and wellness, our
               expertise ensures your business is equipped to succeed in every
@@ -26,6 +26,7 @@ const IndustriesHero = () => {
           width={1704}
           height={450}
           alt="Hero image"
+          className="fadeInUp"
         />
       </div>
     </section>

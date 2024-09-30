@@ -9,9 +9,9 @@ const HomeHero = () => {
     <section className="home-hero">
       <div className="home-hero__inner container">
         <div className="home-hero__top">
-          <h1>Expert Support for International Business Operations</h1>
+          <h1 className="fadeInUp">Expert Support for International Business Operations</h1>
 
-          <div className="content">
+          <div className="content fadeInUp">
             <p>
               Compliance, legal, and financial solutions for efficient global
               operations. Get expert help navigating regulations, managing
@@ -27,6 +27,7 @@ const HomeHero = () => {
           width={1704}
           height={450}
           alt="Hero image"
+          className="fadeInUp"
         />
       </div>
     </section>

@@ -36,11 +36,11 @@ const items = [
     return (
       <section className="why-chose-us">
         <div className="why-chose-us__inner container">
-          <div className="why-chose-us__top">
+          <div className="why-chose-us__top fadeInUp">
             <h2>Why Choose us</h2>
           </div>
   
-          <div className="why-chose-us__content">
+          <div className="why-chose-us__content fadeInUp">
             <div className="why-chose-us__items">
               {items.map((item, index) => (
                 <div key={index} className="why-chose-us__item">

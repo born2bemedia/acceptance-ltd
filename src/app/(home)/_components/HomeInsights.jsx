@@ -27,7 +27,7 @@ const HomeInsights = () => {
   return (
     <section className="home-insights">
       <div className="home-insights__inner container">
-        <div className="top">
+        <div className="top fadeInUp">
           <h3>Latest company insights</h3>
           <Link href="#" className="button">More Insights
             <ButtonIcon />
@@ -43,7 +43,7 @@ const HomeInsights = () => {
               modules={[Pagination]}
             >
               <SwiperSlide>
-                <div className="item">
+                <div className="item fadeInUp">
                   <Image
                     src="/images/insight-img.svg"
                     quality={100}
@@ -62,7 +62,7 @@ const HomeInsights = () => {
               </SwiperSlide>
 
               <SwiperSlide>
-                <div className="item">
+                <div className="item fadeInUp">
                   <Image
                     src="/images/insight-img.svg"
                     quality={100}
@@ -81,7 +81,7 @@ const HomeInsights = () => {
               </SwiperSlide>
 
               <SwiperSlide>
-                <div className="item">
+                <div className="item fadeInUp">
                   <Image
                     src="/images/insight-img.svg"
                     quality={100}
@@ -101,7 +101,7 @@ const HomeInsights = () => {
             </Swiper>
           ) : (
             <div className="items">
-              <div className="item">
+              <div className="item fadeInUp">
                 <Image
                   src="/images/insight-img.svg"
                   quality={100}
@@ -118,7 +118,7 @@ const HomeInsights = () => {
                 </div>
               </div>
 
-              <div className="item">
+              <div className="item fadeInUp">
                 <Image
                   src="/images/insight-img.svg"
                   quality={100}
@@ -135,7 +135,7 @@ const HomeInsights = () => {
                 </div>
               </div>
 
-              <div className="item">
+              <div className="item fadeInUp">
                 <Image
                   src="/images/insight-img.svg"
                   quality={100}
