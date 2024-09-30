@@ -11,11 +11,7 @@ import countryList from "react-select-country-list"; // Import the country list
 import { ButtonIcon, CheckboxIcon } from "./Icons";
 
 function RequestPopup() {
-  const {
-    orderPopupDisplay,
-    setOrderPopupDisplay,
-    serviceValue,
-  } = usePopup();
+  const { orderPopupDisplay, setOrderPopupDisplay, serviceValue } = usePopup();
 
   const countryCode = useCountryCode();
   const options = useMemo(() => countryList().getData(), []); // Generate country list options
@@ -145,7 +141,7 @@ function RequestPopup() {
     email: "",
     phone: "",
     country: "",
-    solution: {serviceValue},
+    solution: serviceValue,
     message: "",
     agreement: false,
   };
@@ -167,9 +163,7 @@ function RequestPopup() {
   };
 
   return (
-    <div
-      className={`order-popup-wrap ${orderPopupDisplay ? "opened" : ""}`}
-    >
+    <div className={`order-popup-wrap ${orderPopupDisplay ? "opened" : ""}`}>
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
@@ -182,6 +176,7 @@ function RequestPopup() {
           errors,
           resetForm,
           setFieldValue,
+          values,
         }) => (
           <div>
             <div
@@ -189,30 +184,33 @@ function RequestPopup() {
               onClick={() => closePopup(resetForm)}
             ></div>
             <div className="popup-inner">
-              <div className="popup-top">
-                <h2>{serviceValue} REQUEST</h2>
-                <img
-                  src="/images/closePopup.svg"
-                  className="popup-close"
-                  alt="popup-close"
-                  onClick={() => closePopup(resetForm)}
-                />
-              </div>
-              <div>
-                <div className="request-form">
-                  <Form>
-                    {status && status.success ? (
-                      <div className="thanks-message full">
-                        <img src="/images/success.svg" />
-                        <span>
-                          Thank You for Your Submission! <br />
-                          Your request has been received. Our team will review
-                          it and contact you shortly. If you have any questions,
-                          feel free to reach out.
-                        </span>
-                      </div>
-                    ) : (
-                      <>
+              {status && status.success ? (
+                <div className="thanks-message full">
+                  <h2>Thank You for Your Submission! </h2>
+                  <span>
+                    Your request has been received. Our team will review it and
+                    contact you shortly. If you have any questions, feel free to
+                    reach out.
+                    <br />
+                    <br />
+                    We look forward to assisting you!
+                  </span>
+                </div>
+              ) : (
+                <>
+                  <div className="popup-top">
+                    <h2>{serviceValue} REQUEST</h2>
+                    <img
+                      src="/images/closePopup.svg"
+                      className="popup-close"
+                      alt="popup-close"
+                      onClick={() => closePopup(resetForm)}
+                    />
+                  </div>
+                  <div>
+                    <div className="request-form">
+                      <Form>
+                        <Field name="solution" type="hidden" />
                         <div>
                           <Field
                             name="firstName"
@@ -284,7 +282,7 @@ function RequestPopup() {
                         <div>
                           <Select
                             name="country"
-                            options={options} // Use country options from react-select-country-list
+                            options={options}
                             styles={customStyles}
                             className={`form-field ${
                               touched.country && errors.country ? "invalid" : ""
@@ -293,6 +291,9 @@ function RequestPopup() {
                               setFieldValue("country", option.value)
                             }
                             placeholder="Country"
+                            value={options.find(
+                              (option) => option.value === values.country
+                            )} // Make sure the value is correctly set
                           />
                           <ErrorMessage
                             name="country"
@@ -304,7 +305,7 @@ function RequestPopup() {
                         <div>
                           <PhoneInput
                             country={countryCode}
-                            value=""
+                            value={values.phone}
                             onChange={(value) => setFieldValue("phone", value)}
                             placeholder="Phone"
                             className={
@@ -349,11 +350,11 @@ function RequestPopup() {
                           <span>Submit</span>
                           <ButtonIcon />
                         </button>
-                      </>
-                    )}
-                  </Form>
-                </div>
-              </div>
+                      </Form>
+                    </div>
+                  </div>
+                </>
+              )}
             </div>
           </div>
         )}

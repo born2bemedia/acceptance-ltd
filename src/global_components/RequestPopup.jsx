@@ -190,30 +190,31 @@ function RequestPopup() {
               onClick={() => closePopup(resetForm)}
             ></div>
             <div className="popup-inner">
-              <div className="popup-top">
-                <h2>Contact Us</h2>
-                <img
-                  src="/images/closePopup.svg"
-                  className="popup-close"
-                  alt="popup-close"
-                  onClick={() => closePopup(resetForm)}
-                />
-              </div>
-              <div>
-                <div className="request-form">
-                  <Form>
-                    {status && status.success ? (
-                      <div className="thanks-message full">
-                        <img src="/images/success.svg" />
-                        <span>
-                          Thank You for Your Submission! <br />
-                          Your request has been received. Our team will review
-                          it and contact you shortly. If you have any questions,
-                          feel free to reach out.
-                        </span>
-                      </div>
-                    ) : (
-                      <>
+              {status && status.success ? (
+                <div className="thanks-message full">
+                  <h2>Thank You for Your Submission! </h2>
+                  <span>
+                    Your request has been received. Our team will review it and
+                    contact you shortly. If you have any questions, feel free to
+                    reach out.
+                    <br /><br />
+                    We look forward to assisting you!
+                  </span>
+                </div>
+              ) : (
+                <>
+                  <div className="popup-top">
+                    <h2>Contact Us</h2>
+                    <img
+                      src="/images/closePopup.svg"
+                      className="popup-close"
+                      alt="popup-close"
+                      onClick={() => closePopup(resetForm)}
+                    />
+                  </div>
+                  <div>
+                    <div className="request-form">
+                      <Form>
                         <div>
                           <Field
                             name="firstName"
@@ -372,11 +373,11 @@ function RequestPopup() {
                           <span>Submit</span>
                           <ButtonIcon />
                         </button>
-                      </>
-                    )}
-                  </Form>
-                </div>
-              </div>
+                      </Form>
+                    </div>
+                  </div>
+                </>
+              )}
             </div>
           </div>
         )}
