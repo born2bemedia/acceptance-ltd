@@ -210,7 +210,7 @@ function RequestPopup() {
                   <div>
                     <div className="request-form">
                       <Form>
-                        <Field name="solution" type="hidden" />
+                        <Field name="solution" type="hidden" value={serviceValue} />
                         <div>
                           <Field
                             name="firstName"
