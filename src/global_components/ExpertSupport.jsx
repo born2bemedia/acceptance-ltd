@@ -7,8 +7,8 @@ const ExpertSupport = ({ title, text }) => {
   return (
     <section className="expert-support">
       <div className="expert-support__inner container">
-        <h2>{title}</h2>
-        <p>{text}</p>
+        <h2 className="fadeInUp">{title}</h2>
+        <p className="fadeInUp">{text}</p>
         <RequestButton />
       </div>
     </section>

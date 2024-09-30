@@ -58,7 +58,7 @@ const HomeIndustriesWeServe = () => {
   return (
     <section className="industries-we-serve">
       <div className="industries-we-serve__inner container">
-        <h2>Industries We Serve</h2>
+        <h2 className="fadeInUp">Industries We Serve</h2>
 
         <div className="custom-navigation">
           
@@ -66,6 +66,7 @@ const HomeIndustriesWeServe = () => {
         </div>
 
         <Swiper
+        className="fadeInUp"
           onSwiper={(swiper) => (swiperRef.current = swiper)} // Привязываем реф к Swiper
           spaceBetween={30}
           pagination={{ clickable: true }}
@@ -103,7 +104,7 @@ const HomeIndustriesWeServe = () => {
                 <ArrowPrevIcon />
             </button>
 
-            <Link href="/industries" className="button">
+            <Link href="/industries" className="button fadeInUp">
                 Check Industries
                 <ButtonIcon />
             </Link>

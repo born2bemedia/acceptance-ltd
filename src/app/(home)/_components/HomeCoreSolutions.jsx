@@ -55,7 +55,7 @@ const items = [
     return (
       <section className="core-solutions">
         <div className="core-solutions__inner container">
-          <div className="col-content">
+          <div className="col-content fadeInUp">
             <h3>Core Solutions for Your Business</h3>
             <p>Tailored compliance, legal, and financial services for smooth international operations, secure banking, and full regulatory compliance.</p>
             <Link href="/industries" className="button">
@@ -65,7 +65,7 @@ const items = [
           </div>
           <div className="col-items">
             {items.map((item, index) => (
-              <div className="item" key={index}>
+              <div className="item fadeInUp" key={index}>
                 <div className="title">
                   <div className="icon">{item.icon}</div>
                   <h4>{item.title}</h4>

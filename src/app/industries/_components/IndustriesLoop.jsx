@@ -93,7 +93,7 @@ const IndustriesLoop = () => {
     <section className="solutions-loop">
       <div className="container">
         {services.map((service, index) => (
-          <div className="solution" key={index}>
+          <div className="solution fadeInUp" key={index}>
             <div className="solution-top">
               <h4>
                 <b>{String(index + 1).padStart(2, "0")}</b>

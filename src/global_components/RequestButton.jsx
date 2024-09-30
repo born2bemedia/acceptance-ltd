@@ -11,7 +11,7 @@ function RequestButton({ text }) {
   };
   return (
     <>
-      <button className="button" onClick={() => orderPopupOpen()}>
+      <button className="button fadeInUp" onClick={() => orderPopupOpen()}>
         <span>{text ? text : "Get a Consultation"}</span>
         <ButtonIcon />
       </button>
