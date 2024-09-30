@@ -6,16 +6,22 @@ import HomeIndustriesWeServe from "./_components/HomeIndustriesWeServe";
 import HomeExpertSupport from "./_components/HomeExpertSupport";
 import HomeInsights from "./_components/HomeInsights";
 import HomeWhyChoseUs from "./_components/HomeWhyChoseUs";
+import ExpertSupport from "@/global_components/ExpertSupport";
 
 export default function Home() {
-    return (
-        <>
-        <HomeHero />
-        <HomeCoreSolutions />
-        <HomeIndustriesWeServe />
-        <HomeWhyChoseUs />
-        <HomeInsights />
-        <HomeExpertSupport />
-        </>
-    );
-  }
+  return (
+    <>
+      <HomeHero />
+      <HomeCoreSolutions />
+      <HomeIndustriesWeServe />
+      <HomeWhyChoseUs />
+      <HomeInsights />
+      <ExpertSupport
+        title={"Get expert support for your business"}
+        text={
+          "Ready to navigate the complexities of compliance, legal services, and financial advisory? Contact us today for a consultation tailored to your industry needs."
+        }
+      />
+    </>
+  );
+}
