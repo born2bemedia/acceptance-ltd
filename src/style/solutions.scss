@@ -7,7 +7,7 @@
     display: flex;
     align-items: flex-start;
     gap: 100px;
-    @media (max-width: 1600px) {
+    @media (max-width: 768px) {
       flex-direction: column;
       gap: 80px;
       padding: 0;
@@ -15,12 +15,12 @@
     img {
       width: 50%;
       height: auto;
-      @media (max-width: 1600px) {
+      @media (max-width: 768px) {
         width: 100%;
       }
     }
     .col-01 {
-      @media (max-width: 1600px) {
+      @media (max-width: 768px) {
         padding: 0 16px;
       }
       h1 {
