@@ -136,6 +136,10 @@ p {
 
 a {
   transition: all 0.5s;
+
+  &:focus-visible{
+    outline: none;
+  }
 }
 
 .button {
