@@ -1,0 +1,149 @@
+.single-post{
+    padding-bottom: 108px;
+
+    &__inner{
+
+        .top{
+            border-top: 1px solid rgba(20, 63, 52, 0.5019607843);
+            border-bottom: 1px solid rgba(20, 63, 52, 0.5019607843);
+            margin: 26px 0 57px;
+            padding-top: 66px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            @media (max-width:768px){
+                border-top: 1px solid rgba(20, 63, 52, 0.5019607843);
+                border-bottom: 1px solid rgba(20, 63, 52, 0.5019607843);
+                margin: 40px 0 40px;
+                padding-top: 40px;
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            h1{
+                font-size: 64px;
+                font-weight: 600;
+                line-height: 75px;
+                border-right: 1px solid #143F3480;
+                padding-right: 57px;
+                @media (max-width:768px){
+                    font-size: 32px;
+                    font-weight: 600;
+                    line-height: 37px;
+                    border-right: none;
+                    padding-right: 0;
+                }
+            }
+
+            .image-container{
+                padding: 0 54px 70px 57px;
+                @media (max-width:768px){
+                    padding: 0 0 40px 0;
+                }
+
+                img{
+                    width: 100%;
+                    border-radius: 16px;
+                }
+            }
+        }
+
+        .content{
+            display: flex;
+
+            article{
+                padding-right: 89px;
+                @media (max-width:768px){
+                    padding-right: 0;
+                }
+                
+                h2{
+                    font-size: 24px;
+                    font-weight: 600;
+                    line-height: 28.13px;
+                    color: #143F34;
+                    margin: 50px 0 25px;
+                }
+
+                p{
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 21.09px;
+                    color: #0A0A0A;
+                    margin-bottom: 25px;
+                    @media (max-width:768px){
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 18px;
+                    }
+                }
+
+                ul{
+                    margin: 25px 0;
+                    padding: 0 0 0 25px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    li{
+                        font-size: 18px;
+                        font-weight: 400;
+                        line-height: 21.09px;
+                        @media (max-width:768px){
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 18px;
+                        }
+                    }
+                }
+
+                strong{
+                    font-weight: 500;
+                }
+            }
+
+            .col-buttons{
+                min-width: 465px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: column;
+                border-left: 1px solid #143F3480;
+                @media (max-width:768px){
+                    display: none;
+                }
+
+                &__inner{
+                    position: sticky;
+                    top: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
+                    width: 100%;
+                    max-width: 281px;
+
+                    .next-post{
+                        border: 1px solid #143F34;
+                        border-radius: 100px;
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 16px;
+                        font-weight: 600;
+                        line-height: 18.75px;
+                        text-decoration: none;
+                        padding: 12px 24px;
+                        color: #0A0A0A;
+
+                        svg{
+
+                            path{
+                                fill: #0A0A0A;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

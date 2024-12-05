@@ -29,7 +29,7 @@ const HomeInsights = () => {
       <div className="home-insights__inner container">
         <div className="top fadeInUp">
           <h3>Latest company insights</h3>
-          <Link href="#" className="button">More Insights
+          <Link href="/insights" className="button">More Insights
             <ButtonIcon />
           </Link>
         </div>

@@ -19,6 +19,8 @@
     "react-phone-input-2": "^2.15.1",
     "react-select": "^5.8.1",
     "react-select-country-list": "^2.2.3",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1",
     "sass": "^1.79.4",
     "swiper": "^11.1.14",
     "yup": "^1.4.0"

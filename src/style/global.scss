@@ -136,10 +136,16 @@ p {
 
 a {
   transition: all 0.5s;
+  cursor: pointer;
 
   &:focus-visible{
     outline: none;
   }
+}
+
+button{
+  transition: all 0.5s;
+  cursor: pointer;
 }
 
 .button {

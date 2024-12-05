@@ -9,6 +9,7 @@ import HomeWhyChoseUs from "./_components/HomeWhyChoseUs";
 import ExpertSupport from "@/global_components/ExpertSupport";
 import RequestPopup from "@/global_components/RequestPopup";
 
+
 export default function Home() {
   return (
     <>
@@ -16,7 +17,7 @@ export default function Home() {
       <HomeCoreSolutions />
       <HomeIndustriesWeServe />
       <HomeWhyChoseUs />
-      <HomeInsights />
+      <HomeInsights/>
       <ExpertSupport
         title={"Get expert support for your business"}
         text={
