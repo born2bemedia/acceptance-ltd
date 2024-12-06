@@ -1,158 +1,61 @@
-"use client";
-import React, { useState, useEffect } from "react";
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
 import Link from "next/link";
-import Image from "next/image";
-import { ButtonIcon } from '../../../global_components/Icons';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import { Pagination } from 'swiper/modules';
+import { ButtonIcon } from "../../../global_components/Icons";
 
 const HomeInsights = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  // Путь к папке с постами
+  const postsDirectory = path.join(process.cwd(), "src/content/posts");
+  const filenames = fs.readdirSync(postsDirectory);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
+  // Чтение постов
+  const posts = filenames.map((filename) => {
+    const filePath = path.join(postsDirectory, filename);
+    const fileContents = fs.readFileSync(filePath, "utf-8");
+    const { data } = matter(fileContents);
+
+    return {
+      slug: filename.replace(".md", ""),
+      title: data.title,
+      excerpt: data.excerpt,
+      image: data.image || null,
     };
-
-    handleResize();
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+  });
 
   return (
     <section className="home-insights">
       <div className="home-insights__inner container">
         <div className="top fadeInUp">
           <h3>Latest company insights</h3>
-          <Link href="/insights" className="button">More Insights
+          <Link href="/insights" className="button">
+            More Insights
             <ButtonIcon />
           </Link>
         </div>
 
-        <div className="home-insights-slider">
-          {isMobile ? (
-            <Swiper
-              spaceBetween={30}
-              pagination={{ clickable: true }}
-              loop={true}
-              modules={[Pagination]}
+        <div className="posts">
+          {posts.map((post) => (
+            <Link
+              key={post.slug}
+              href={`/insights/${post.slug}`}
+              className="insights-post__wrapper fadeInUp"
             >
-              <SwiperSlide>
-                <div className="item fadeInUp">
-                  <Image
-                    src="/images/insight-img.svg"
-                    quality={100}
-                    width={840}
-                    height={340}
-                    alt="Blog post image"
-                  />
-                  <div className="content">
-                    <h4>Heading</h4>
-                    <p>Preview</p>
-                    <Link href="#" className="insight-button">Read
-                      <ButtonIcon />
-                    </Link>
+              <div className="insights-post">
+                {post.image && (
+                  <img src={post.image} alt={post.title} className="post-image" />
+                )}
+                <div className="content">
+                  <h4>{post.title}</h4>
+                  <p>{post.excerpt}</p>
+                  <div className="insights-post__link">
+                    Read
+                    <ButtonIcon />
                   </div>
                 </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className="item fadeInUp">
-                  <Image
-                    src="/images/insight-img.svg"
-                    quality={100}
-                    width={408}
-                    height={340}
-                    alt="Blog post image"
-                  />
-                  <div className="content">
-                    <h4>Heading</h4>
-                    <p>Preview</p>
-                    <Link href="#" className="insight-button">Read
-                      <ButtonIcon />
-                    </Link>
-                  </div>
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className="item fadeInUp">
-                  <Image
-                    src="/images/insight-img.svg"
-                    quality={100}
-                    width={408}
-                    height={340}
-                    alt="Blog post image"
-                  />
-                  <div className="content">
-                    <h4>Heading</h4>
-                    <p>Preview</p>
-                    <Link href="#" className="insight-button">Read
-                      <ButtonIcon />
-                    </Link>
-                  </div>
-                </div>
-              </SwiperSlide>
-            </Swiper>
-          ) : (
-            <div className="items">
-              <div className="item fadeInUp">
-                <Image
-                  src="/images/insight-img.svg"
-                  quality={100}
-                  width={840}
-                  height={340}
-                  alt="Blog post image"
-                />
-                <div className="content">
-                  <h4>Heading</h4>
-                  <p>Preview</p>
-                  <Link href="#" className="insight-button">Read
-                    <ButtonIcon />
-                  </Link>
-                </div>
               </div>
-
-              <div className="item fadeInUp">
-                <Image
-                  src="/images/insight-img.svg"
-                  quality={100}
-                  width={408}
-                  height={340}
-                  alt="Blog post image"
-                />
-                <div className="content">
-                  <h4>Heading</h4>
-                  <p>Preview</p>
-                  <Link href="#" className="insight-button">Read
-                    <ButtonIcon />
-                  </Link>
-                </div>
-              </div>
-
-              <div className="item fadeInUp">
-                <Image
-                  src="/images/insight-img.svg"
-                  quality={100}
-                  width={408}
-                  height={340}
-                  alt="Blog post image"
-                />
-                <div className="content">
-                  <h4>Heading</h4>
-                  <p>Preview</p>
-                  <Link href="#" className="insight-button">Read
-                    <ButtonIcon />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          )}
+            </Link>
+          ))}
         </div>
       </div>
     </section>
