@@ -17,6 +17,7 @@ const OurBlock = () => {
                         alt="Our block image"
                         className="fadeInUp"
                     />
+                    <RequestButton text={"Connect with the Team"} />
                 </div>
 
                 <div className="col">
