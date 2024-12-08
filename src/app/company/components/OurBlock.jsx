@@ -1,7 +1,5 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
-import { ButtonIcon } from '../../../global_components/Icons';
 import RequestButton from "@/global_components/RequestButton";
 
 const OurBlock = () => {

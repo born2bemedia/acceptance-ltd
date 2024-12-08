@@ -1,0 +1,186 @@
+.faq-hero{
+    padding: 78px 0 94px;
+    @media (max-width:768px){
+        padding: 80px 0;
+    }
+
+    &__inner{
+        display: flex;
+        gap: 39px;
+        align-items: flex-end;
+        @media (max-width:768px){
+            gap: 24px;
+            flex-direction: column;
+        }
+
+        h1{
+            font-size: 64px;
+            font-weight: 600;
+            line-height: 75px;
+            color: #0A0A0A;
+            @media (max-width:768px){
+                font-size: 32px;
+                line-height: 37px;
+            }
+        }
+
+        hr{
+            flex: 1;
+            margin: 14px 0;
+            background-color: rgba(20, 63, 52, 0.5019607843);
+            height: 1px;
+            margin-top: auto;
+            @media (max-width:768px){
+                display: none;
+            }
+        }
+
+        p{
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 28.13px;
+            color: #0A0A0A;
+            margin-bottom: 10px;
+            @media (max-width:768px){
+                font-size: 16px;
+                line-height: 18px;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.accordion-block{
+
+    &__inner{
+        display: flex;
+        gap: 50px;
+        padding-bottom: 112px;
+        @media (max-width:768px){
+            gap: 77px;
+            padding: 0 0 80px 0;
+            flex-direction: column;
+        }
+
+        .col-image{
+            max-width: 786px;
+
+            img{
+                width: 100%;
+                border-radius: 16px;
+                overflow: hidden;
+                height: auto;
+                margin-bottom: 80px;
+                @media(max-width:768px){
+                    border-radius: 0;
+                    margin-bottom: 0;
+                    max-height: 153px;
+                    object-fit: cover;
+                    object-position: top center;
+                }
+            }
+
+            .button{
+                width: 100%;
+                @media (max-width:768px){
+                    display: none;
+                }
+            }
+        }
+
+        .col-accordion{
+            flex: 1;
+            max-width: 830px;
+            margin-left: auto;
+            @media (max-width:768px){
+                padding: 0 14px;
+            }
+
+            .accordion {
+                .accordion-item {
+                  border-bottom: 1px solid #143F3480;
+
+                    &:first-child {
+                        
+                        .accordion-header{
+                            padding-top: 0;
+                        }
+                    }
+              
+                  .accordion-header {
+                    display: flex;
+                    gap: 40px;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 40px 0 40px 40px;
+                    cursor: pointer;
+                    @media (max-width:768px){
+                        padding: 20px 0 20px 20px;
+                    }
+              
+                    h3 {
+                        font-size: 24px;
+                        font-weight: 600;
+                        line-height: 28.13px;
+                        color: #0A0A0A;
+                        @media(max-width:768px){
+                            font-size: 18px;
+                            line-height: 21px;
+                        }
+                    }
+                  }
+              
+                  .accordion-content {
+                    max-height: 0;
+                    overflow: hidden;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+              
+                    p {
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 18.75px;
+                        color: #0A0A0A;
+                        padding: 0 75px 40px 40px;
+                        @media (max-width:768px){
+                            padding: 0 20px 20px 20px;
+                        }
+                    }
+                  }
+              
+                  &.active {
+
+                    &:first-child{
+                        .accordion-header{
+                            padding-top: 0;
+                        }
+                    }
+
+                    .accordion-header{
+                        padding: 40px 0 33px 40px; 
+                        @media (max-width:768px){
+                            padding: 20px 0 20px 20px;  
+                        }
+                    }
+
+                    .accordion-content {
+                      max-height: 500px;
+                      opacity: 1;
+                      visibility: visible;
+                    }
+                  }
+                }
+            }
+              
+            .button{
+                display: none;
+                @media (max-width:768px){
+                    display: flex;
+                    width: 100%;
+                    margin-top: 80px;
+                }
+            }
+        }
+    }
+}
