@@ -66,31 +66,26 @@ const ContactForm = () => {
       {({ setFieldValue, values }) => (
         <Form className="contact-form">
           <div className="form-group">
-            <label>First Name</label>
-            <Field name="firstName" type="text" className="form-control" />
+            <Field name="firstName" type="text" className="form-control" placeholder="First Name" />
             <ErrorMessage name="firstName" component="div" className="error-message" />
           </div>
 
           <div className="form-group">
-            <label>Last Name</label>
-            <Field name="lastName" type="text" className="form-control" />
+            <Field name="lastName" type="text" className="form-control" placeholder="Last Name" />
             <ErrorMessage name="lastName" component="div" className="error-message" />
           </div>
 
           <div className="form-group">
-            <label>Company</label>
-            <Field name="company" type="text" className="form-control" />
+            <Field name="company" type="text" className="form-control" placeholder="Company" />
             <ErrorMessage name="company" component="div" className="error-message" />
           </div>
 
           <div className="form-group">
-            <label>Corporate Email</label>
-            <Field name="email" type="email" className="form-control" />
+            <Field name="email" type="email" className="form-control" placeholder="Corporate Email" />
             <ErrorMessage name="email" component="div" className="error-message" />
           </div>
 
           <div className="form-group">
-            <label>Country</label>
             <Select
               options={countries}
               onChange={(selectedOption) => setFieldValue("country", selectedOption.label)}
@@ -101,7 +96,6 @@ const ContactForm = () => {
           </div>
 
           <div className="form-group">
-            <label>Phone</label>
             <PhoneInput
               country="us"
               value={values.phone}
@@ -111,9 +105,8 @@ const ContactForm = () => {
             <ErrorMessage name="phone" component="div" className="error-message" />
           </div>
 
-          <div className="form-group">
-            <label>Message</label>
-            <Field name="message" as="textarea" className="form-control" />
+          <div className="form-group form-group-massage">
+            <Field name="message" as="textarea" className="form-control" placeholder="Message"  />
             <ErrorMessage name="message" component="div" className="error-message" />
           </div>
 
@@ -126,7 +119,9 @@ const ContactForm = () => {
           </div>
 
           <button type="submit" className="btn btn-primary">
-            Submit
+            Submit<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+<path d="M13.0002 0C13.2654 0 13.5198 0.105357 13.7073 0.292893C13.8948 0.48043 14.0002 0.734784 14.0002 1V9C14.0002 9.26522 13.8948 9.51957 13.7073 9.70711C13.5198 9.89464 13.2654 10 13.0002 10C12.735 10 12.4806 9.89464 12.2931 9.70711C12.1055 9.51957 12.0002 9.26522 12.0002 9V3.414L2.05018 13.364C1.86158 13.5462 1.60898 13.647 1.34678 13.6447C1.08458 13.6424 0.83377 13.5372 0.648362 13.3518C0.462954 13.1664 0.357785 12.9156 0.355507 12.6534C0.353228 12.3912 0.454022 12.1386 0.636181 11.95L10.5862 2H5.00018C4.73496 2 4.48061 1.89464 4.29307 1.70711C4.10554 1.51957 4.00018 1.26522 4.00018 1C4.00018 0.734784 4.10554 0.48043 4.29307 0.292893C4.48061 0.105357 4.73496 0 5.00018 0H13.0002Z" fill="white"/>
+</svg>
           </button>
         </Form>
       )}
