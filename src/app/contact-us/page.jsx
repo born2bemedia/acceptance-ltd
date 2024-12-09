@@ -1,9 +1,34 @@
 import Image from "next/image";
 import "@/style/contact-us.scss";
+import ContactForm from "./components/ContactForm";
 
 export default function contactUs() {
     return (
         <>
+        <section class="contact-aceptanta">
+            <div className="contact-aceptanta__inner container">
+                <div className="col col-content">
+                    <h2>Contact Aceptanta</h2>
+                    <p>Specialised help for your business.</p>
+
+                    <Image
+                        src="/images/contacts/image-contacts.webp"
+                        quality={100}
+                        width={795}
+                        height={361}
+                        alt="image contacts"
+                        className="fadeInUp"
+                    />
+                </div>
+
+                <div className="col col-form">
+                    <h2>Why Choose us</h2>
+
+                    <ContactForm />
+                </div>
+            </div>
+        </section>
+
         <section className="more-ways">
             <div className="more-ways__inner container">
                 <h2>More Ways to Connect</h2>
