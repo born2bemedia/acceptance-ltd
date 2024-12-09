@@ -5,12 +5,11 @@ import * as Yup from "yup";
 import PhoneInput from "react-phone-input-2";
 import Select from "react-select";
 import "react-phone-input-2/lib/style.css";
-import countryList from "react-select-country-list"; // Список стран
+import countryList from "react-select-country-list";
 
 const ContactForm = () => {
-  const countries = useMemo(() => countryList().getData(), []); // Получение списка стран
+  const countries = useMemo(() => countryList().getData(), []);
 
-  // Валидационная схема
   const validationSchema = Yup.object().shape({
     firstName: Yup.string().required("First Name is required"),
     lastName: Yup.string().required("Last Name is required"),
@@ -22,7 +21,6 @@ const ContactForm = () => {
     agree: Yup.bool().oneOf([true], "You must agree to the Privacy Policy"),
   });
 
-  // Начальные значения
   const initialValues = {
     firstName: "",
     lastName: "",
@@ -34,7 +32,6 @@ const ContactForm = () => {
     agree: false,
   };
 
-  // Обработка отправки формы
   const handleSubmit = async (values, { resetForm }) => {
     try {
       const response = await fetch("/api/contact", {
@@ -47,7 +44,7 @@ const ContactForm = () => {
 
       if (response.ok) {
         alert("Form submitted successfully");
-        resetForm(); // Сброс формы
+        resetForm();
       } else {
         alert("Failed to submit the form. Please try again.");
       }
