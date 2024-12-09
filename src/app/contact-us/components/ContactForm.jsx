@@ -5,11 +5,12 @@ import * as Yup from "yup";
 import PhoneInput from "react-phone-input-2";
 import Select from "react-select";
 import "react-phone-input-2/lib/style.css";
-import countryList from "react-select-country-list";
+import countryList from "react-select-country-list"; // Список стран
 
 const ContactForm = () => {
-  const countries = useMemo(() => countryList().getData(), []);
+  const countries = useMemo(() => countryList().getData(), []); // Получение списка стран
 
+  // Валидационная схема
   const validationSchema = Yup.object().shape({
     firstName: Yup.string().required("First Name is required"),
     lastName: Yup.string().required("Last Name is required"),
@@ -21,6 +22,7 @@ const ContactForm = () => {
     agree: Yup.bool().oneOf([true], "You must agree to the Privacy Policy"),
   });
 
+  // Начальные значения
   const initialValues = {
     firstName: "",
     lastName: "",
@@ -32,9 +34,27 @@ const ContactForm = () => {
     agree: false,
   };
 
-  const handleSubmit = (values, { resetForm }) => {
-    console.log("Form data:", values);
-    resetForm();
+  // Обработка отправки формы
+  const handleSubmit = async (values, { resetForm }) => {
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (response.ok) {
+        alert("Form submitted successfully");
+        resetForm(); // Сброс формы
+      } else {
+        alert("Failed to submit the form. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("An error occurred. Please try again.");
+    }
   };
 
   return (
@@ -73,8 +93,8 @@ const ContactForm = () => {
             <label>Country</label>
             <Select
               options={countries}
-              onChange={(selectedOption) => setFieldValue("country", selectedOption.value)}
-              value={countries.find((option) => option.value === values.country)}
+              onChange={(selectedOption) => setFieldValue("country", selectedOption.label)}
+              value={countries.find((option) => option.label === values.country)}
               className="form-control"
             />
             <ErrorMessage name="country" component="div" className="error-message" />
