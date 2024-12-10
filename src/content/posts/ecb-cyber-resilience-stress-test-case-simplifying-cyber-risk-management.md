@@ -1,5 +1,7 @@
 ---
 title: "ECB Cyber Resilience Stress Test: The Case for Simplifying Cyber Risk Management"
+metaTitle: "ECB Cyber Resilience Stress Test: Simplifying Cyber Risk Management"
+metaDescription: "Explore the findings of the ECB's Cyber Resilience Stress Test and learn how organisations can simplify their approach to cyber risk management."
 date: "2024-12-05"
 excerpt: "The ECB’s inaugural Cyber Resilience Stress Test reveals crucial insights into banks’ preparedness for cyber incidents. This article emphasises the need for streamlined cyber risk management strategies that combine proactive measures and flexible response plans to effectively mitigate complex risks in an ever-evolving threat landscape."
 image: "/images/posts/post-three.webp"

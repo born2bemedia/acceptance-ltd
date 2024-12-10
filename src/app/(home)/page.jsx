@@ -9,6 +9,14 @@ import HomeWhyChoseUs from "./_components/HomeWhyChoseUs";
 import ExpertSupport from "@/global_components/ExpertSupport";
 import RequestPopup from "@/global_components/RequestPopup";
 
+export const metadata = {
+  title: "Business Assistance & Compliance Solutions | Aceptanta",
+  description: "Get expert business support, compliance, and legal services, ensuring your global operations run smoothly and efficiently.",
+  openGraph: {
+    title: "Business Assistance & Compliance Solutions | Aceptanta",
+    description: "Get expert business support, compliance, and legal services, ensuring your global operations run smoothly and efficiently.",
+  },
+};
 
 export default function Home() {
   return (

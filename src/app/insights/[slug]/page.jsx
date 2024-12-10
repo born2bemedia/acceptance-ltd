@@ -5,7 +5,27 @@ import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
 import "@/style/single-post.scss";
-import { ButtonIcon } from '../../../global_components/Icons';
+import { ButtonIcon } from "../../../global_components/Icons";
+
+export async function generateMetadata({ params }) {
+  const { slug } = params;
+
+  const postsDirectory = path.join(process.cwd(), "src/content/posts");
+  const filePath = path.join(postsDirectory, `${slug}.md`);
+  const fileContents = fs.readFileSync(filePath, "utf-8");
+
+  const { data } = matter(fileContents);
+
+  return {
+    title: data.metaTitle || data.title,
+    description: data.metaDescription || data.excerpt || "Read this amazing article.",
+    openGraph: {
+      title: data.metaTitle || data.title,
+      description: data.metaDescription || data.excerpt || "Read this amazing article.",
+      images: data.image ? [data.image] : [],
+    },
+  };
+}
 
 export default async function PostPage({ params }) {
   const { slug } = params;
@@ -37,17 +57,17 @@ export default async function PostPage({ params }) {
           <article dangerouslySetInnerHTML={{ __html: htmlContent }} />
           <div className="col-buttons">
             <div className="col-buttons__inner">
-                <Link href="/insights" className="btn button all-posts">
+              <Link href="/insights" className="btn button all-posts">
                 All Insights
                 <ButtonIcon />
-                </Link>
+              </Link>
 
-                {nextSlug && (
+              {nextSlug && (
                 <Link href={`/insights/${nextSlug}`} className="btn next-post">
-                    Next Article
-                    <ButtonIcon />
+                  Next Article
+                  <ButtonIcon />
                 </Link>
-                )}
+              )}
             </div>
           </div>
         </div>

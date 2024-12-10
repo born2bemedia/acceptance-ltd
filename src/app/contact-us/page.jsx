@@ -2,6 +2,15 @@ import Image from "next/image";
 import "@/style/contact-us.scss";
 import ContactForm from "./components/ContactForm";
 
+export const metadata = {
+    title: "Contact Us | Aceptanta",
+    description: "Contact the Aceptanta expert team. Feel free to share your issues or ask questions. Get a free consultation within 48 business hours.",
+    openGraph: {
+      title: "Contact Us | Aceptanta",
+      description: "Contact the Aceptanta expert team. Feel free to share your issues or ask questions. Get a free consultation within 48 business hours.",
+    },
+};
+
 export default function contactUs() {
     return (
         <>

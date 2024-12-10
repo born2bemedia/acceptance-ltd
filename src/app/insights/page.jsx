@@ -6,6 +6,15 @@ import InsightsPosts from "./components/InsightsPosts";
 import RequestPopup from "@/global_components/RequestPopup";
 import "@/style/insights.scss";
 
+export const metadata = {
+  title: "Market Insights | Aceptanta",
+  description: "Explore Aceptanta's insights on compliance, regulations, and industry trends. Stay informed with expert analysis to guide your business decisions.",
+  openGraph: {
+    title: "Market Insights | Aceptanta",
+    description: "Explore Aceptanta's insights on compliance, regulations, and industry trends. Stay informed with expert analysis to guide your business decisions.",
+  },
+};
+
 export default async function InsightsPage() {
   const postsDirectory = path.join(process.cwd(), "src/content/posts");
   const filenames = fs.readdirSync(postsDirectory);

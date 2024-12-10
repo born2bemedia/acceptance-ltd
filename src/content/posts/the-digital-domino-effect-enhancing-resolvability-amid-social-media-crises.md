@@ -1,5 +1,7 @@
 ---
 title: "The Digital Domino Effect: Enhancing Resolvability Amid Social Media Crises"
+metaTitle: "Enhancing Resolvability Amid Social Media Crises | Aceptanta"
+metaDescription: "Discover strategies to improve your business's resilience in social media crises. Learn how to enhance your organisation's response and recovery capabilities."
 date: "2024-12-05"
 excerpt: "Discover how companies can prepare for and navigate the fast-paced, high-stakes world of social media crises. This article explores strategies to enhance organisational resilience and minimise reputational damage in the age of instant digital reactions."
 image: "/images/posts/post-one.webp"
