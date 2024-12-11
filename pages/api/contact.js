@@ -24,42 +24,51 @@ export default async function handler(req, res) {
     },
   });
 
-  try {
-    // Отправка письма администратору
-    await transporter.sendMail({
-      from: `"Contact Form" <${process.env.EMAIL_USER}>`,
-      to: process.env.EMAIL_USER,
-      subject: "New Contact Form Submission",
-      html: `
-        <h1>New Contact Form Submission</h1>
-        <p><strong>First Name:</strong> ${firstName}</p>
-        <p><strong>Last Name:</strong> ${lastName}</p>
-        <p><strong>Company:</strong> ${company}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Country:</strong> ${country}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Message:</strong> ${message || "No message provided."}</p>
-      `,
-    });
+  console.log("Starting email handler...");
+console.log("Request body:", req.body);
 
-    // Отправка благодарственного письма пользователю
-    await transporter.sendMail({
-      from: `"Your Company" <${process.env.EMAIL_USER}>`,
-      to: email,
-      subject: "Thank you for contacting us",
-      html: `
-        <h1>Thank you, ${firstName}!</h1>
-        <p>We have received your message and will get back to you as soon as possible.</p>
-        ${message ? `<p><strong>Your Message:</strong> ${message}</p>` : ""}
-        <br />
-        <p>Best regards,</p>
-        <p>Your Company</p>
-      `,
-    });
-
-    return res.status(200).json({ message: "Emails sent successfully" });
-  } catch (error) {
-    console.error("Error sending email:", error);
-    return res.status(500).json({ message: "Failed to send email. Please try again later." });
-  }
+try {
+  // Отправка email админу
+  await transporter.sendMail({
+    from: `"Contact Form" <${process.env.EMAIL_USER}>`,
+    to: process.env.EMAIL_USER,
+    subject: "New Contact Form Submission",
+    html: `
+      <h1>New Contact Form Submission</h1>
+      <p><strong>First Name:</strong> ${firstName}</p>
+      <p><strong>Last Name:</strong> ${lastName}</p>
+      <p><strong>Company:</strong> ${company}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Country:</strong> ${country}</p>
+      <p><strong>Phone:</strong> ${phone}</p>
+      <p><strong>Message:</strong> ${message || "No message provided."}</p>
+    `,
+  });
+  console.log("Email to admin sent successfully.");
+} catch (error) {
+  console.error("Error sending email to admin:", error);
+  return res.status(500).json({ message: "Failed to send email to admin." });
 }
+
+try {
+  // Отправка email пользователю
+  await transporter.sendMail({
+    from: `"Your Company" <${process.env.EMAIL_USER}>`,
+    to: email,
+    subject: "Thank you for contacting us",
+    html: `
+      <h1>Thank you, ${firstName}!</h1>
+      <p>We have received your message and will get back to you as soon as possible.</p>
+      ${message ? `<p><strong>Your Message:</strong> ${message}</p>` : ""}
+      <br />
+      <p>Best regards,</p>
+      <p>Your Company</p>
+    `,
+  });
+  console.log("Thank you email to user sent successfully.");
+} catch (error) {
+  console.error("Error sending thank you email to user:", error);
+  return res.status(500).json({ message: "Failed to send thank you email." });
+}
+
+return res.status(200).json({ message: "Emails sent successfully." });
