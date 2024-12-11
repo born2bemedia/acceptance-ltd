@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ButtonIcon } from '../../../global_components/Icons';
+import RequestButton from "@/global_components/RequestButton";
 
 
 const items = [
@@ -58,10 +59,7 @@ const items = [
                         height={570}
                         alt="WHY CHOOSE US image"
                     />
-                    <Link href="#" className="button">
-                        Get Assistance
-                        <ButtonIcon />
-                    </Link>
+                    <RequestButton text={"Get Assistance"} />
                 </div>
           </div>
         </div>

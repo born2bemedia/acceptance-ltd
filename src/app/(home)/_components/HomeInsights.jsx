@@ -3,6 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import Link from "next/link";
 import { ButtonIcon } from "../../../global_components/Icons";
+import PostsSlider from "./PostsSlider";
 
 
 const HomeInsights = () => {
@@ -58,7 +59,9 @@ const HomeInsights = () => {
         </div>
 
       </div>
+      <PostsSlider posts={posts} />
     </section>
+    
   );
 };
 
