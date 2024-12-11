@@ -126,7 +126,6 @@ function RequestPopup() {
       .required("This field is required."),
     phone: Yup.string().required("This field is required."),
     country: Yup.string().required("This field is required."),
-    solution: Yup.string().required("This field is required."),
     message: Yup.string(),
     agreement: Yup.bool().oneOf(
       [true],
@@ -141,7 +140,6 @@ function RequestPopup() {
     email: "",
     phone: "",
     country: "",
-    solution: serviceValue,
     message: "",
     agreement: false,
   };
@@ -157,9 +155,34 @@ function RequestPopup() {
     values,
     { setSubmitting, resetForm, setStatus }
   ) => {
-    setSubmitting(false);
-    resetForm();
-    setStatus({ success: true });
+    const valuesWithService = {
+      ...values,
+      solution: serviceValue,
+    };
+
+    try {
+      const response = await fetch("/api/order", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(valuesWithService),
+      });
+
+      if (response.ok) {
+        setTimeout(() => {
+          setSubmitting(false);
+          resetForm();
+          setStatus({ success: true });
+        }, 400);
+      } else {
+        setStatus({ success: false });
+      }
+    } catch (error) {
+      //console.error(error);
+      setStatus({ success: false });
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -210,7 +233,6 @@ function RequestPopup() {
                   <div>
                     <div className="request-form">
                       <Form>
-                        <Field name="solution" type="hidden" value={serviceValue} />
                         <div>
                           <Field
                             name="firstName"
