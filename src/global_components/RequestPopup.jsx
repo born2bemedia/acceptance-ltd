@@ -158,13 +158,34 @@ function RequestPopup() {
     }
   };
 
+
   const handleSubmit = async (
     values,
     { setSubmitting, resetForm, setStatus }
   ) => {
-    setSubmitting(false);
-    resetForm();
-    setStatus({ success: true });
+    try {
+      const response = await fetch("/api/request", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (response.ok) {
+        setTimeout(() => {
+          setSubmitting(false);
+          resetForm();
+          setStatus({ success: true });
+        }, 400);
+      } else {
+        setStatus({ success: false });
+      }
+    } catch (error) {
+      //console.error(error);
+      setStatus({ success: false });
+      setSubmitting(false);
+    }
   };
 
   return (
