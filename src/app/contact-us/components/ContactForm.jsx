@@ -34,7 +34,7 @@ const ContactForm = () => {
 
   const handleSubmit = async (values, { setSubmitting, resetForm, setStatus }) => {
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("/contexts/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
