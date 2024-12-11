@@ -4,12 +4,11 @@ import matter from "gray-matter";
 import Link from "next/link";
 import { ButtonIcon } from "../../../global_components/Icons";
 
+
 const HomeInsights = () => {
-  // Путь к папке с постами
   const postsDirectory = path.join(process.cwd(), "src/content/posts");
   const filenames = fs.readdirSync(postsDirectory);
 
-  // Чтение постов
   const posts = filenames.map((filename) => {
     const filePath = path.join(postsDirectory, filename);
     const fileContents = fs.readFileSync(filePath, "utf-8");
@@ -57,6 +56,7 @@ const HomeInsights = () => {
             </Link>
           ))}
         </div>
+
       </div>
     </section>
   );
