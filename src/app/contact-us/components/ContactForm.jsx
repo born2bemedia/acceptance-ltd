@@ -34,7 +34,7 @@ const ContactForm = () => {
 
   const handleSubmit = async (values, { setSubmitting, resetForm, setStatus }) => {
     try {
-      const response = await fetch("/contexts/contact", {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -122,7 +122,6 @@ const ContactForm = () => {
             Submit
           </button>
 
-          {/* Показываем ошибку, если есть ошибки */}
           {Object.keys(errors).length > 0 && touched && (
             <div className="error-message">This field is required</div>
           )}
