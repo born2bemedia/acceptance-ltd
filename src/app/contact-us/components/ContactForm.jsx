@@ -41,13 +41,14 @@ const ContactForm = () => {
         },
         body: JSON.stringify(values),
       });
-
+  
       if (response.ok) {
-        alert("Form submitted successfully");
+        alert("Your message has been sent successfully!");
         resetForm();
         setStatus(null);
       } else {
-        setStatus("Failed to submit the form. Please try again.");
+        const data = await response.json();
+        setStatus(data.message || "Failed to send the message.");
       }
     } catch (error) {
       console.error("Error submitting form:", error);
@@ -56,6 +57,7 @@ const ContactForm = () => {
       setSubmitting(false);
     }
   };
+  
 
   return (
     <Formik
