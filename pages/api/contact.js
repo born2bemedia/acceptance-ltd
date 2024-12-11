@@ -27,12 +27,12 @@ export default async function handler(req, res) {
 
   console.log("Starting email handler...");
   console.log("Request body:", req.body);
-
+  
   try {
-    // Отправляем email админу
+    // Отправка email админу
     await transporter.sendMail({
       from: `"Contact Form" <${process.env.EMAIL_USER}>`,
-      to: process.env.EMAIL_USER, // Email администратора
+      to: process.env.EMAIL_USER,
       subject: "New Contact Form Submission",
       html: `
         <h1>New Contact Form Submission</h1>
