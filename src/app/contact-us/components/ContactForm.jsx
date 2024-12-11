@@ -1,6 +1,6 @@
 "use client";
 import React, { useMemo } from "react";
-import { Formik, Form, Field } from "formik";
+import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import PhoneInput from "react-phone-input-2";
 import Select from "react-select";
@@ -17,7 +17,7 @@ const ContactForm = () => {
     email: Yup.string().email("Invalid email").required("This field is required"),
     country: Yup.string().required("This field is required"),
     phone: Yup.string().required("This field is required"),
-    message: Yup.string(),
+    message: Yup.string(), // Поле необязательное
     agree: Yup.bool().oneOf([true], "You must agree to the Privacy Policy"),
   });
 
@@ -43,11 +43,11 @@ const ContactForm = () => {
       });
 
       if (response.ok) {
-        setStatus("Your message has been sent successfully!");
+        alert("Form submitted successfully");
         resetForm();
+        setStatus(null);
       } else {
-        const { error } = await response.json();
-        setStatus(error || "Failed to send your message. Please try again.");
+        setStatus("Failed to submit the form. Please try again.");
       }
     } catch (error) {
       console.error("Error submitting form:", error);
@@ -63,46 +63,68 @@ const ContactForm = () => {
       validationSchema={validationSchema}
       onSubmit={handleSubmit}
     >
-      {({ setFieldValue, values, errors, touched, isSubmitting, status }) => (
+      {({ setFieldValue, values, errors, touched, isValid, status }) => (
         <Form className="contact-form">
-          <div>
-            <Field name="firstName" type="text" placeholder="First Name" />
+          <div className={`form-group ${errors.firstName && touched.firstName ? "invalid" : ""}`}>
+            <Field name="firstName" type="text" className="form-control" placeholder="First Name" />
           </div>
-          <div>
-            <Field name="lastName" type="text" placeholder="Last Name" />
+
+          <div className={`form-group ${errors.lastName && touched.lastName ? "invalid" : ""}`}>
+            <Field name="lastName" type="text" className="form-control" placeholder="Last Name" />
           </div>
-          <div>
-            <Field name="company" type="text" placeholder="Company" />
+
+          <div className={`form-group ${errors.company && touched.company ? "invalid" : ""}`}>
+            <Field name="company" type="text" className="form-control" placeholder="Company" />
           </div>
-          <div>
-            <Field name="email" type="email" placeholder="Email" />
+
+          <div className={`form-group ${errors.email && touched.email ? "invalid" : ""}`}>
+            <Field name="email" type="email" className="form-control" placeholder="Corporate Email" />
           </div>
-          <div>
+
+          <div className={`form-group ${errors.country && touched.country ? "invalid" : ""}`}>
             <Select
               options={countries}
               onChange={(selectedOption) => setFieldValue("country", selectedOption.label)}
               value={countries.find((option) => option.label === values.country)}
+              className="form-control"
               placeholder="Country"
             />
           </div>
-          <div>
+
+          <div className={`form-group ${errors.phone && touched.phone ? "invalid" : ""}`}>
             <PhoneInput
               country="us"
               value={values.phone}
               onChange={(phone) => setFieldValue("phone", phone)}
+              className="form-control"
             />
           </div>
-          <div>
-            <Field name="message" as="textarea" placeholder="Message" />
+
+          <div className={`form-group form-group__message ${errors.message && touched.message ? "invalid" : ""}`}>
+            <Field name="message" as="textarea" className="form-control" placeholder="Message" />
           </div>
-          <div>
-            <Field name="agree" type="checkbox" id="agree" />
-            <label htmlFor="agree">I agree to the Privacy Policy.</label>
+
+          <div className={`form-group checkbox-group ${errors.agree && touched.agree ? "invalid" : ""}`}>
+            <Field
+              name="agree"
+              type="checkbox"
+              id="agree"
+              className="form-checkbox"
+            />
+            <label htmlFor="agree">
+              I agree to the processing of my data according to the Privacy Policy.
+            </label>
           </div>
-          <button type="submit" disabled={isSubmitting}>
-            {isSubmitting ? "Submitting..." : "Submit"}
+
+          
+
+          <button type="submit" className="btn btn-primary">
+            Submit
           </button>
-          {status && <div className="form-status">{status}</div>}
+
+          {Object.keys(errors).length > 0 && touched && (
+            <div className="error-message">This field is required</div>
+          )}
         </Form>
       )}
     </Formik>
