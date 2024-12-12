@@ -1,6 +1,6 @@
 "use client";
-import React, { useMemo } from "react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import React, { useMemo, useState } from "react";
+import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import PhoneInput from "react-phone-input-2";
 import Select from "react-select";
@@ -8,7 +8,78 @@ import "react-phone-input-2/lib/style.css";
 import countryList from "react-select-country-list";
 
 const ContactForm = () => {
-  const countries = useMemo(() => countryList().getData(), []);
+  const [submissionStatus, setSubmissionStatus] = useState(null);
+
+  // Страны для исключения
+  const excludedCountries = [
+    "Israel",
+    "United States of America",
+    "Albania",
+    "Barbados",
+    "Bosnia and Herzegovina",
+    "Guyana",
+    "Jamaica",
+    "Lao",
+    "Mauritius",
+    "Myanmar",
+    "Nicaragua",
+    "Uganda",
+    "Vanuatu",
+    "Afghanistan",
+    "Bahamas",
+    "Botswana",
+    "Cambodia",
+    "Ethiopia",
+    "Ghana",
+    "Iceland",
+    "Iraq",
+    "Mongolia",
+    "Pakistan",
+    "Panama",
+    "Sri Lanka",
+    "Trinidad and Tobago",
+    "Tunisia",
+    "US Virgin Island",
+    "Yemen",
+    "Zimbabwe",
+    "Russia",
+    "Belarus",
+    "Cuba",
+    "North Korea",
+    "Sudan",
+    "Syria",
+    "Alger",
+    "Bangladesh",
+    "Bolivia",
+    "China",
+    "Kyrgyzstan",
+    "Macedonia",
+    "Nepal",
+    "Nigeria",
+    "Thailand",
+    "USA",
+    "Korea",
+    "Syrian",
+    "Arab Republic",
+    "Somalia",
+    "Vietnam",
+    "Colombia",
+    "Ecuador",
+    "Algeria",
+    "Indonesia",
+    "Jordan",
+    "Morocco",
+    "Saudi Arabia",
+    "Taiwan",
+  ];
+
+  // Фильтруем список стран
+  const countries = useMemo(() => {
+    const allCountries = countryList().getData();
+    return allCountries.filter(
+      (country) => !excludedCountries.includes(country.label)
+    );
+  }, []);
 
   const validationSchema = Yup.object().shape({
     firstName: Yup.string().required("This field is required"),
@@ -19,7 +90,7 @@ const ContactForm = () => {
       .required("This field is required"),
     country: Yup.string().required("This field is required"),
     phone: Yup.string().required("This field is required"),
-    message: Yup.string(), // Поле необязательное
+    message: Yup.string(),
     agree: Yup.bool().oneOf([true], "You must agree to the Privacy Policy"),
   });
 
@@ -48,152 +119,159 @@ const ContactForm = () => {
       });
 
       if (response.ok) {
+        setSubmissionStatus("success");
         setTimeout(() => {
           setSubmitting(false);
           resetForm();
-          setStatus({ success: true });
         }, 400);
       } else {
-        setStatus({ success: false });
+        setSubmissionStatus("error");
       }
     } catch (error) {
-      //console.error(error);
-      setStatus({ success: false });
+      setSubmissionStatus("error");
       setSubmitting(false);
     }
   };
 
   return (
-    <Formik
-      initialValues={initialValues}
-      validationSchema={validationSchema}
-      onSubmit={handleSubmit}
-    >
-      {({ setFieldValue, values, errors, touched, isValid, status }) => (
-        <Form className="contact-form">
-          <div
-            className={`form-group ${
-              errors.firstName && touched.firstName ? "invalid" : ""
-            }`}
-          >
-            <Field
-              name="firstName"
-              type="text"
-              className="form-control"
-              placeholder="First Name"
-            />
-          </div>
-
-          <div
-            className={`form-group ${
-              errors.lastName && touched.lastName ? "invalid" : ""
-            }`}
-          >
-            <Field
-              name="lastName"
-              type="text"
-              className="form-control"
-              placeholder="Last Name"
-            />
-          </div>
-
-          <div
-            className={`form-group ${
-              errors.company && touched.company ? "invalid" : ""
-            }`}
-          >
-            <Field
-              name="company"
-              type="text"
-              className="form-control"
-              placeholder="Company"
-            />
-          </div>
-
-          <div
-            className={`form-group ${
-              errors.email && touched.email ? "invalid" : ""
-            }`}
-          >
-            <Field
-              name="email"
-              type="email"
-              className="form-control"
-              placeholder="Corporate Email"
-            />
-          </div>
-
-          <div
-            className={`form-group ${
-              errors.country && touched.country ? "invalid" : ""
-            }`}
-          >
-            <Select
-              options={countries}
-              onChange={(selectedOption) =>
-                setFieldValue("country", selectedOption.label)
-              }
-              value={countries.find(
-                (option) => option.label === values.country
-              )}
-              className="form-control"
-              placeholder="Country"
-            />
-          </div>
-
-          <div
-            className={`form-group ${
-              errors.phone && touched.phone ? "invalid" : ""
-            }`}
-          >
-            <PhoneInput
-              country="us"
-              value={values.phone}
-              onChange={(phone) => setFieldValue("phone", phone)}
-              className="form-control"
-            />
-          </div>
-
-          <div
-            className={`form-group form-group__message ${
-              errors.message && touched.message ? "invalid" : ""
-            }`}
-          >
-            <Field
-              name="message"
-              as="textarea"
-              className="form-control"
-              placeholder="Message"
-            />
-          </div>
-
-          <div
-            className={`form-group checkbox-group ${
-              errors.agree && touched.agree ? "invalid" : ""
-            }`}
-          >
-            <Field
-              name="agree"
-              type="checkbox"
-              id="agree"
-              className="form-checkbox"
-            />
-            <label htmlFor="agree">
-              I agree to the processing of my data according to the Privacy
-              Policy.
-            </label>
-          </div>
-
-          <button type="submit" className="btn btn-primary">
-            Submit
-          </button>
-
-          {Object.keys(errors).length > 0 && touched && (
-            <div className="error-message">This field is required</div>
-          )}
-        </Form>
+    <div className="contact-form-wrapper">
+      {submissionStatus === "success" && (
+        <div className="success-message">
+          Thank you! Your message has been successfully sent.
+        </div>
       )}
-    </Formik>
+      {submissionStatus === "error" && (
+        <div className="error-message">
+          Something went wrong. Please try again later.
+        </div>
+      )}
+      <Formik
+        initialValues={initialValues}
+        validationSchema={validationSchema}
+        onSubmit={handleSubmit}
+      >
+        {({ setFieldValue, values, errors, touched }) => (
+          <Form className="contact-form">
+            <div
+              className={`form-group ${
+                errors.firstName && touched.firstName ? "invalid" : ""
+              }`}
+            >
+              <Field
+                name="firstName"
+                type="text"
+                className="form-control"
+                placeholder="First Name"
+              />
+            </div>
+
+            <div
+              className={`form-group ${
+                errors.lastName && touched.lastName ? "invalid" : ""
+              }`}
+            >
+              <Field
+                name="lastName"
+                type="text"
+                className="form-control"
+                placeholder="Last Name"
+              />
+            </div>
+
+            <div
+              className={`form-group ${
+                errors.company && touched.company ? "invalid" : ""
+              }`}
+            >
+              <Field
+                name="company"
+                type="text"
+                className="form-control"
+                placeholder="Company"
+              />
+            </div>
+
+            <div
+              className={`form-group ${
+                errors.email && touched.email ? "invalid" : ""
+              }`}
+            >
+              <Field
+                name="email"
+                type="email"
+                className="form-control"
+                placeholder="Corporate Email"
+              />
+            </div>
+
+            <div
+              className={`form-group ${
+                errors.country && touched.country ? "invalid" : ""
+              }`}
+            >
+              <Select
+                options={countries}
+                onChange={(selectedOption) =>
+                  setFieldValue("country", selectedOption.label)
+                }
+                value={countries.find(
+                  (option) => option.label === values.country
+                )}
+                className="form-control"
+                placeholder="Country"
+              />
+            </div>
+
+            <div
+              className={`form-group ${
+                errors.phone && touched.phone ? "invalid" : ""
+              }`}
+            >
+              <PhoneInput
+                country="us"
+                value={values.phone}
+                onChange={(phone) => setFieldValue("phone", phone)}
+                className="form-control"
+              />
+            </div>
+
+            <div
+              className={`form-group form-group__message ${
+                errors.message && touched.message ? "invalid" : ""
+              }`}
+            >
+              <Field
+                name="message"
+                as="textarea"
+                className="form-control"
+                placeholder="Message"
+              />
+            </div>
+
+            <div
+              className={`form-group checkbox-group ${
+                errors.agree && touched.agree ? "invalid" : ""
+              }`}
+            >
+              <Field
+                name="agree"
+                type="checkbox"
+                id="agree"
+                className="form-checkbox"
+              />
+              <label htmlFor="agree">
+                I agree to the processing of my data according to the Privacy
+                Policy.
+              </label>
+            </div>
+
+            <button type="submit" className="btn btn-primary">
+              Submit
+            </button>
+          </Form>
+        )}
+      </Formik>
+    </div>
   );
 };
 

@@ -292,6 +292,11 @@ button{
 
     .thanks-message {
       text-align: center;
+
+      svg{
+        margin-bottom: 25px;
+      }
+      
       h2 {
         font-size: 32px;
         font-weight: 600;
