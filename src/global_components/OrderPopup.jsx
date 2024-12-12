@@ -14,7 +14,75 @@ function RequestPopup() {
   const { orderPopupDisplay, setOrderPopupDisplay, serviceValue } = usePopup();
 
   const countryCode = useCountryCode();
-  const options = useMemo(() => countryList().getData(), []); // Generate country list options
+  
+  const excludedCountries = [
+    "Israel",
+    "United States of America",
+    "Albania",
+    "Barbados",
+    "Bosnia and Herzegovina",
+    "Guyana",
+    "Jamaica",
+    "Lao",
+    "Mauritius",
+    "Myanmar",
+    "Nicaragua",
+    "Uganda",
+    "Vanuatu",
+    "Afghanistan",
+    "Bahamas",
+    "Botswana",
+    "Cambodia",
+    "Ethiopia",
+    "Ghana",
+    "Iceland",
+    "Iraq",
+    "Mongolia",
+    "Pakistan",
+    "Panama",
+    "Sri Lanka",
+    "Trinidad and Tobago",
+    "Tunisia",
+    "US Virgin Island",
+    "Yemen",
+    "Zimbabwe",
+    "Russia",
+    "Belarus",
+    "Cuba",
+    "North Korea",
+    "Sudan",
+    "Syria",
+    "Alger",
+    "Bangladesh",
+    "Bolivia",
+    "China",
+    "Kyrgyzstan",
+    "Macedonia",
+    "Nepal",
+    "Nigeria",
+    "Thailand",
+    "USA",
+    "Korea",
+    "Syrian",
+    "Arab Republic",
+    "Somalia",
+    "Vietnam",
+    "Colombia",
+    "Ecuador",
+    "Algeria",
+    "Indonesia",
+    "Jordan",
+    "Morocco",
+    "Saudi Arabia",
+    "Taiwan, Province of China",
+  ];
+
+  const options = useMemo(() => {
+    const allCountries = countryList().getData();
+    return allCountries.filter(
+      (country) => !excludedCountries.includes(country.label)
+    );
+  }, []);
 
   const solutions = [
     {

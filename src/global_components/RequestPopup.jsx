@@ -7,7 +7,7 @@ import "react-phone-input-2/lib/style.css";
 import PhoneInput from "react-phone-input-2";
 import Select from "react-select";
 import useCountryCode from "@/utils/useCountryCode";
-import countryList from "react-select-country-list"; // Import the country list
+import countryList from "react-select-country-list";
 import { ButtonIcon, CheckboxIcon } from "./Icons";
 
 function RequestPopup() {
@@ -19,7 +19,76 @@ function RequestPopup() {
   } = usePopup();
 
   const countryCode = useCountryCode();
-  const options = useMemo(() => countryList().getData(), []); // Generate country list options
+  
+  const excludedCountries = [
+    "Israel",
+    "United States of America",
+    "Albania",
+    "Barbados",
+    "Bosnia and Herzegovina",
+    "Guyana",
+    "Jamaica",
+    "Lao",
+    "Mauritius",
+    "Myanmar",
+    "Nicaragua",
+    "Uganda",
+    "Vanuatu",
+    "Afghanistan",
+    "Bahamas",
+    "Botswana",
+    "Cambodia",
+    "Ethiopia",
+    "Ghana",
+    "Iceland",
+    "Iraq",
+    "Mongolia",
+    "Pakistan",
+    "Panama",
+    "Sri Lanka",
+    "Trinidad and Tobago",
+    "Tunisia",
+    "US Virgin Island",
+    "Yemen",
+    "Zimbabwe",
+    "Russia",
+    "Belarus",
+    "Cuba",
+    "North Korea",
+    "Sudan",
+    "Syria",
+    "Alger",
+    "Bangladesh",
+    "Bolivia",
+    "China",
+    "Kyrgyzstan",
+    "Macedonia",
+    "Nepal",
+    "Nigeria",
+    "Thailand",
+    "USA",
+    "Korea",
+    "Syrian",
+    "Arab Republic",
+    "Somalia",
+    "Vietnam",
+    "Colombia",
+    "Ecuador",
+    "Algeria",
+    "Indonesia",
+    "Jordan",
+    "Morocco",
+    "Saudi Arabia",
+    "Taiwan, Province of China",
+  ];
+
+  // Фильтруем страны
+  const options = useMemo(() => {
+    const allCountries = countryList().getData();
+    return allCountries.filter(
+      (country) => !excludedCountries.includes(country.label)
+    );
+  }, []);
 
   const solutions = [
     {

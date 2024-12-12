@@ -3,14 +3,13 @@
     &__inner{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        padding-top: 78px;
+        padding: 78px 0 117px;
         @media (max-width:768px){
             grid-template-columns: 1fr;
-            padding-top: 80px;
+            padding: 80px 0 37px;
         }
 
         .col{
-            border-bottom: 1px solid rgba(20, 63, 52, 0.5019607843);
 
             h2{
                 font-size: 64px;
@@ -22,6 +21,7 @@
                     font-size: 32px;
                     font-weight: 600;
                     line-height: 37px;
+                    padding: 0 16px;
                 }
             }
 
@@ -35,12 +35,14 @@
                     font-size: 16px;
                     font-weight: 400;
                     line-height: 18px;
+                    margin-bottom: 37px;
+                    padding: 0 16px;
                 }
             }
         }
 
         .col-content{
-            padding: 0 57px 74px 0;
+            padding: 0 57px 0 0;
             border-right: 1px solid rgba(20, 63, 52, 0.5019607843);
             @media (max-width:768px){
                 padding: 0 0 40px 0;
@@ -60,9 +62,10 @@
         }
 
         .col-form{
-            padding: 0 0 74px 57px;
+            padding: 0 0 0 57px;
             @media (max-width:768px){
                 padding: 40px 0;
+                padding: 40px 16px;
             }
 
             .contact-form{
@@ -372,90 +375,26 @@
                     }
                 }
             }
-        }
-    }
-}
 
-.more-ways{
-    padding: 74px 0 108px;
-    @media (max-width:768px){
-        padding: 40px 0 80px;
-    }
-
-    &__inner{
-
-        h2{
-            font-size: 64px;
-            font-weight: 600;
-            line-height: 75px;
-            margin-bottom: 62px;
-            @media (max-width:768px){
-                font-size: 32px;
-                line-height: 37px;
-                margin-bottom: 32px;
-            }
-        }
-
-        .cols{
-            display: grid;
-            grid-template-columns: 427px 2fr;
-            border-bottom: 1px solid #143F3480;
-            @media (max-width:768px){
-                grid-template-columns: 1fr;
-                gap: 40px;
-                border-bottom: none;;
-            }
-
-            .col-email{
-                border-right: 1px solid #143F3480;
+            hr{
+                margin: 74px 0 74px -57px;
                 @media (max-width:768px){
-                    border-right: none;
-                }
-
-                a{
-                    display: flex;
-                    gap: 24px;
-                    font-size: 24px;
-                    font-weight: 600;
-                    line-height: 28.13px;
-                    color: #0A0A0A;
-                    text-decoration: none;
-                    align-items: center;
-                    
-                    &:hover{
-                        color: #47B782;
-                    }
+                    margin: 40px 0;
                 }
             }
 
-            .col-addess{
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 89px;
-                padding: 0 100px 80px;
-                @media (max-width:768px){
-                    grid-template-columns: 1fr;
-                    gap: 30px;
-                    padding: 0;
-                }
+            .email{
+                display: flex;
+                align-items: center;
+                gap: 24px;
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 28.13px;
+                color: #0A0A0A;
+                text-decoration: none;
 
-                .item{
-
-                    span{
-                        display: flex;
-                        gap: 24px;
-                        margin-bottom: 38px;
-                        align-items: center;
-                        font-size: 24px;
-                        font-weight: 600;
-                        line-height: 28.13px;
-                    }
-
-                    img{
-                        width: 100%;
-                        object-fit: cover;
-                        border-radius: 16px;
-                    }
+                &:hover{
+                    color: #47B782;
                 }
             }
         }
