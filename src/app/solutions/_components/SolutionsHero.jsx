@@ -18,7 +18,7 @@ const SolutionsHero = () => {
             compliant, and efficient operations at every step.
           </p>
         </div>
-        <Image className="fadeInUp" src="/images/solutions/hero.png" width={840} height={360} />
+        <Image className="fadeInUp" src="/images/solutions/solution-img.webp" width={840} height={360} />
       </div>
     </section>
   );

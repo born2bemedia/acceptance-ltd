@@ -21,7 +21,7 @@ const IndustriesHero = () => {
         </div>
 
         <Image
-          src="/images/industries/hero-image.webp"
+          src="/images/industries/industries-img.webp"
           quality={100}
           width={1704}
           height={450}
