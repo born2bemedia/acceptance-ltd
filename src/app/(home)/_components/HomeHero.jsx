@@ -22,7 +22,7 @@ const HomeHero = () => {
         </div>
 
         <Image
-          src="/images/hero-image.webp"
+          src="/images/Rectangle-16661.webp"
           quality={100}
           width={1704}
           height={450}
