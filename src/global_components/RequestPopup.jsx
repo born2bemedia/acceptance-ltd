@@ -221,6 +221,12 @@ function RequestPopup() {
                     <br /><br />
                     We look forward to assisting you!
                   </span>
+                  <img
+                      src="/images/closePopup.svg"
+                      className="popup-close"
+                      alt="popup-close"
+                      onClick={() => closePopup(resetForm)}
+                    />
                 </div>
               ) : (
                 <>
@@ -247,11 +253,11 @@ function RequestPopup() {
                                 : ""
                             }
                           />
-                          <ErrorMessage
+                          {/* <ErrorMessage
                             name="firstName"
                             component="div"
                             className="error"
-                          />
+                          /> */}
                         </div>
 
                         <div>
@@ -265,11 +271,11 @@ function RequestPopup() {
                                 : ""
                             }
                           />
-                          <ErrorMessage
+                          {/* <ErrorMessage
                             name="lastName"
                             component="div"
                             className="error"
-                          />
+                          /> */}
                         </div>
 
                         <div>
@@ -281,11 +287,11 @@ function RequestPopup() {
                               touched.company && errors.company ? "invalid" : ""
                             }
                           />
-                          <ErrorMessage
+                          {/* <ErrorMessage
                             name="company"
                             component="div"
                             className="error"
-                          />
+                          /> */}
                         </div>
 
                         <div>
@@ -297,11 +303,11 @@ function RequestPopup() {
                               touched.email && errors.email ? "invalid" : ""
                             }
                           />
-                          <ErrorMessage
+                          {/* <ErrorMessage
                             name="email"
                             component="div"
                             className="error"
-                          />
+                          /> */}
                         </div>
 
                         <div>
@@ -317,11 +323,11 @@ function RequestPopup() {
                             }
                             placeholder="Country"
                           />
-                          <ErrorMessage
+                          {/* <ErrorMessage
                             name="country"
                             component="div"
                             className="error"
-                          />
+                          /> */}
                         </div>
 
                         <div>
@@ -334,7 +340,7 @@ function RequestPopup() {
                               touched.phone && errors.phone ? "invalid" : ""
                             }
                           />
-                          <ErrorMessage name="phone" component="span" />
+                          {/* <ErrorMessage name="phone" component="span" /> */}
                         </div>
 
                         <div className="full">
@@ -352,11 +358,11 @@ function RequestPopup() {
                             }
                             placeholder="Solution"
                           />
-                          <ErrorMessage
+                          {/* <ErrorMessage
                             name="solution"
                             component="div"
                             className="error"
-                          />
+                          /> */}
                         </div>
 
                         <div className="full">
@@ -379,11 +385,11 @@ function RequestPopup() {
                               </span>
                             </span>
                           </label>
-                          <ErrorMessage
+                          {/* <ErrorMessage
                             name="agreement"
                             component="div"
                             className="error"
-                          />
+                          /> */}
                         </div>
 
                         <button

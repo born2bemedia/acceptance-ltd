@@ -24,7 +24,7 @@ const AccordionBlock = () => {
             <div className="accordion-block__inner container">
                 <div className="col col-image">
                     <Image
-                        src="/images/faq/faq-image.webp"
+                        src="/images/faq/Frame195.webp"
                         quality={100}
                         width={826}
                         height={537}
@@ -36,7 +36,7 @@ const AccordionBlock = () => {
                 <div className="col col-accordion">
                     <div className="accordion">
                         {accordionItems.map((item, index) => {
-                            const contentRef = useRef(null); // Создаем ref для каждого элемента
+                            const contentRef = useRef(null);
                             return (
                                 <div
                                     key={index}
