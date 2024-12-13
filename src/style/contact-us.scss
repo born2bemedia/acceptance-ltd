@@ -80,6 +80,12 @@
                 align-items: center;
                 text-align: center;
 
+                .close-message{
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                }
+
                 h2{
                     font-size: 32px;
                     font-weight: 700;
