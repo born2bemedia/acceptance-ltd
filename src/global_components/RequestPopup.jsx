@@ -387,7 +387,73 @@ function RequestPopup() {
                           <Select
                             name="country"
                             options={options} // Use country options from react-select-country-list
-                            styles={customStyles}
+                            styles={{
+                              control: (provided, state) => ({
+                                ...provided,
+                                border: "none",
+                                boxShadow: "none",
+                                borderRadius: "16px",
+                                padding: "0 10px", 
+                                fontSize: "16px",
+                                maxHeight: "48px",
+                                backgroundColor: "#fff",
+                                "&:hover": {
+                                  borderColor: "none", 
+                                },
+                              }),
+                              input: (provided) => ({
+                                ...provided,
+                                height: "48px",
+                                margin: "0",
+                                padding: "0",
+                              }),
+                              placeholder: (provided) => ({
+                                ...provided,
+                                color: "#444444", 
+                                fontSize: "16px",
+                              }),
+                              singleValue: (provided) => ({
+                                ...provided,
+                                color: "#333", 
+                              }),
+                              dropdownIndicator: (provided) => ({
+                                ...provided,
+                                color: "#444444",
+                                "&:hover": {
+                                  color: "#444444", 
+                                },
+                              }),
+                              indicatorSeparator: () => ({
+                                display: "none", 
+                              }),
+                              menu: (provided) => ({
+                                ...provided,
+                                backgroundColor: "#fff", 
+                                border: "none", 
+                                borderRadius: "16px", 
+                                marginTop: "5px",
+                              }),
+                              menuList: (provided) => ({
+                                ...provided,
+                                padding: "5px",
+                              }),
+                              option: (provided, state) => ({
+                                ...provided,
+                                backgroundColor: state.isSelected
+                                  ? "#47B782" 
+                                  : state.isFocused
+                                  ? "#47B782" 
+                                  : "#fff", 
+                                color: state.isSelected ? "#fff" : "#333", 
+                                padding: "10px",
+                                borderRadius: "16px",
+                                cursor: "pointer",
+                                "&:hover": {
+                                  backgroundColor: "#47B782",
+                                  
+                                },
+                              }),
+                            }}
                             className={`form-field ${
                               touched.country && errors.country ? "invalid" : ""
                             }`}

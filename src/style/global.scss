@@ -646,3 +646,28 @@ button{
     }
   }
 }
+
+
+.react-tel-input .country-list{
+  border-radius: 16px!important;
+}
+
+.react-tel-input .country-list .country.highlight {
+  background-color: #47b782!important;
+  border-radius: 16px!important;
+  color: #ffffff;
+
+  .dial-code{
+    color: #fff!important;
+  }
+}
+
+.react-tel-input .country-list .country:hover {
+  background-color: #47b782 !important;
+  border-radius: 16px !important;
+  color: #ffffff;
+
+  .dial-code{
+    color: #fff!important;
+  }
+}
