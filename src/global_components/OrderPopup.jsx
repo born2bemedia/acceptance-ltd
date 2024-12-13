@@ -14,7 +14,7 @@ function RequestPopup() {
   const { orderPopupDisplay, setOrderPopupDisplay, serviceValue } = usePopup();
 
   const countryCode = useCountryCode();
-  
+
   const excludedCountries = [
     "Israel",
     "United States of America",
@@ -74,7 +74,7 @@ function RequestPopup() {
     "Jordan",
     "Morocco",
     "Saudi Arabia",
-    "Taiwan, Province of China",
+    "Taiwan",
   ];
 
   const options = useMemo(() => {
@@ -83,107 +83,6 @@ function RequestPopup() {
       (country) => !excludedCountries.includes(country.label)
     );
   }, []);
-
-  const solutions = [
-    {
-      value: "Compliance & Legal Services",
-      label: "Compliance & Legal Services",
-    },
-    { value: "Company Formation", label: "Company Formation" },
-    { value: "Bank Account Opening", label: "Bank Account Opening" },
-    { value: "Financial Advisory", label: "Financial Advisory" },
-    { value: "Underwriting", label: "Underwriting" },
-    { value: "Accounting Services", label: "Accounting Services" },
-    { value: "Compliance Monitoring", label: "Compliance Monitoring" },
-    { value: "Tax Reporting", label: "Tax Reporting" },
-    { value: "Document Management", label: "Document Management" },
-    {
-      value: "Company Closure Assistance",
-      label: "Company Closure Assistance",
-    },
-    {
-      value: "Dispute Resolution with Financial Institutions",
-      label: "Dispute Resolution with Financial Institutions",
-    },
-    {
-      value: "Director and Responsible Person Support",
-      label: "Director and Responsible Person Support",
-    },
-  ];
-
-  const customStyles = {
-    control: (provided, state) => ({
-      ...provided,
-      width: "100%",
-      color: "#0d0d0d",
-      height: "50px",
-      borderRadius: "100px",
-      background: "#FFFFFF",
-      border: state.isFocused ? "1px solid #FFFFFF" : "1px solid #FFFFFF",
-      fontSize: "16px",
-      fontWeight: "400",
-      lineHeight: "1.2",
-      textAlign: "left",
-      padding: "0 24px",
-      boxShadow: "unset",
-      "&:hover": {
-        borderColor: "#FFFFFF",
-      },
-    }),
-    valueContainer: (provided) => ({
-      ...provided,
-      height: "48px",
-      margin: "0",
-      padding: "0",
-      border: "none",
-    }),
-    input: (provided) => ({
-      ...provided,
-      height: "48px",
-      margin: "0",
-      padding: "0",
-      border: "none",
-      color: "#0d0d0d",
-    }),
-    singleValue: (provided) => ({
-      ...provided,
-      color: "#0d0d0d",
-    }),
-    indicatorsContainer: (provided) => ({
-      ...provided,
-      "> span": {
-        display: "none",
-      },
-      "> div": {
-        padding: "0",
-        width: "13px",
-        height: "13px",
-        backgroundImage: "url(/images/selectArrow.svg)",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "contain",
-      },
-      "> div > svg": {
-        display: "none",
-      },
-    }),
-    indicatorContainer: (provided) => ({
-      ...provided,
-      padding: "0",
-    }),
-    menu: (provided) => ({
-      ...provided,
-      background: "#ffffff0d",
-    }),
-    option: (provided, state) => ({
-      ...provided,
-      background: state.isSelected ? "#fff" : "#fff",
-      color: "#0d0d0d",
-      "&:hover": {
-        background: "#08AC34",
-      },
-    }),
-  };
 
   const validationSchema = Yup.object({
     firstName: Yup.string().required("This field is required."),
@@ -238,16 +137,13 @@ function RequestPopup() {
       });
 
       if (response.ok) {
-        setTimeout(() => {
-          setSubmitting(false);
-          resetForm();
-          setStatus({ success: true });
-        }, 400);
+        setSubmitting(false);
+        resetForm();
+        setStatus({ success: true });
       } else {
         setStatus({ success: false });
       }
     } catch (error) {
-      //console.error(error);
       setStatus({ success: false });
       setSubmitting(false);
     }
@@ -262,7 +158,6 @@ function RequestPopup() {
       >
         {({
           isSubmitting,
-          status,
           touched,
           errors,
           resetForm,
@@ -270,186 +165,207 @@ function RequestPopup() {
           values,
         }) => (
           <div>
-            <div
-              className="overlay"
-              onClick={() => closePopup(resetForm)}
-            ></div>
+            <div className="overlay" onClick={() => closePopup(resetForm)}></div>
             <div className="popup-inner">
-              {status && status.success ? (
-                <div className="thanks-message full">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
-                  <rect width="64" height="64" rx="8" fill="#E7E7E7"/>
-                  <path d="M18.3079 20.9272C18.1668 25.0731 22.7206 30.5123 25.4555 32.5658C28.8161 31.9336 35.3059 29.068 37.0127 25.2869C37.6689 23.8322 37.6935 22.2867 37.081 21.0464C36.5117 19.8947 35.4431 19.0842 34.0721 18.7649C31.1042 18.0714 28.7948 20.3732 28.7718 20.3962C28.6378 20.5324 28.4431 20.5887 28.2566 20.5449C28.0707 20.5012 27.9214 20.3639 27.8618 20.1829C27.8514 20.1528 26.7976 17.0685 23.8291 16.3772C23.443 16.287 23.0613 16.2427 22.6895 16.2427C21.7406 16.2427 20.8547 16.5325 20.1213 17.0942C19.0237 17.9358 18.3626 19.3331 18.3084 20.9278L18.3079 20.9272Z" fill="#47B782"/>
-                  <path d="M39.2861 46.7641C41.676 45.6934 45.9312 42.4805 46.535 39.4207C46.7652 38.2559 46.524 37.1342 45.8738 36.3429C45.2717 35.6106 44.3666 35.207 43.3248 35.207C41.0585 35.207 39.7663 37.2693 39.7537 37.2906C39.6542 37.4525 39.4775 37.552 39.2872 37.552C39.1073 37.5537 38.9181 37.453 38.8191 37.2895C38.8076 37.2698 37.5142 35.207 35.2485 35.207C34.2067 35.207 33.3011 35.6101 32.6996 36.3429C32.0493 37.1342 31.8082 38.2559 32.0384 39.4202C32.6022 42.2787 36.5638 45.5555 39.2867 46.7636L39.2861 46.7641Z" fill="#47B782"/>
-                  </svg>
-                  <h2>Thank You for Your Submission! </h2>
-                  <span>
-                    Your request has been received. Our team will review it and
-                    contact you shortly. If you have any questions, feel free to
-                    reach out.
-                    <br />
-                    <br />
-                    We look forward to assisting you!
-                  </span>
-                </div>
-              ) : (
-                <>
-                  <div className="popup-top">
-                    <h2>{serviceValue} REQUEST</h2>
-                    <img
-                      src="/images/closePopup.svg"
-                      className="popup-close"
-                      alt="popup-close"
-                      onClick={() => closePopup(resetForm)}
-                    />
-                  </div>
-                  <div>
-                    <div className="request-form">
-                      <Form>
-                        <div>
-                          <Field
-                            name="firstName"
-                            type="text"
-                            placeholder="First Name"
-                            className={
-                              touched.firstName && errors.firstName
-                                ? "invalid"
-                                : ""
-                            }
-                          />
-                          <ErrorMessage
-                            name="firstName"
-                            component="div"
-                            className="error"
-                          />
-                        </div>
-
-                        <div>
-                          <Field
-                            name="lastName"
-                            type="text"
-                            placeholder="Last Name"
-                            className={
-                              touched.lastName && errors.lastName
-                                ? "invalid"
-                                : ""
-                            }
-                          />
-                          <ErrorMessage
-                            name="lastName"
-                            component="div"
-                            className="error"
-                          />
-                        </div>
-
-                        <div>
-                          <Field
-                            name="company"
-                            type="text"
-                            placeholder="Company"
-                            className={
-                              touched.company && errors.company ? "invalid" : ""
-                            }
-                          />
-                          <ErrorMessage
-                            name="company"
-                            component="div"
-                            className="error"
-                          />
-                        </div>
-
-                        <div>
-                          <Field
-                            name="email"
-                            type="email"
-                            placeholder="Corporate Email"
-                            className={
-                              touched.email && errors.email ? "invalid" : ""
-                            }
-                          />
-                          <ErrorMessage
-                            name="email"
-                            component="div"
-                            className="error"
-                          />
-                        </div>
-
-                        <div>
-                          <Select
-                            name="country"
-                            options={options}
-                            styles={customStyles}
-                            className={`form-field ${
-                              touched.country && errors.country ? "invalid" : ""
-                            }`}
-                            onChange={(option) =>
-                              setFieldValue("country", option.value)
-                            }
-                            placeholder="Country"
-                            value={options.find(
-                              (option) => option.value === values.country
-                            )} // Make sure the value is correctly set
-                          />
-                          <ErrorMessage
-                            name="country"
-                            component="div"
-                            className="error"
-                          />
-                        </div>
-
-                        <div>
-                          <PhoneInput
-                            country={countryCode}
-                            value={values.phone}
-                            onChange={(value) => setFieldValue("phone", value)}
-                            placeholder="Phone"
-                            className={
-                              touched.phone && errors.phone ? "invalid" : ""
-                            }
-                          />
-                          <ErrorMessage name="phone" component="span" />
-                        </div>
-
-                        <div className="full">
-                          <Field
-                            name="message"
-                            as="textarea"
-                            placeholder="Message"
-                            className="small"
-                          />
-                        </div>
-
-                        <div className="full checkbox">
-                          <label>
-                            <Field type="checkbox" name="agreement" />
-                            <span>
-                              <CheckboxIcon />
-                              <span>
-                                I agree to the processing of my data according
-                                to the Privacy Policy.
-                              </span>
-                            </span>
-                          </label>
-                          <ErrorMessage
-                            name="agreement"
-                            component="div"
-                            className="error"
-                          />
-                        </div>
-
-                        <button
-                          type="submit"
-                          className="button"
-                          disabled={isSubmitting}
-                        >
-                          <span>Submit</span>
-                          <ButtonIcon />
-                        </button>
-                      </Form>
+              <div className="popup-top">
+                <h2>{serviceValue} REQUEST</h2>
+                <img
+                  src="/images/closePopup.svg"
+                  className="popup-close"
+                  alt="popup-close"
+                  onClick={() => closePopup(resetForm)}
+                />
+              </div>
+              <div>
+                <div className="request-form">
+                  <Form>
+                    <div>
+                      <Field
+                        name="firstName"
+                        type="text"
+                        placeholder="First Name"
+                        className={
+                          touched.firstName && errors.firstName ? "invalid" : ""
+                        }
+                      />
                     </div>
-                  </div>
-                </>
-              )}
+
+                    <div>
+                      <Field
+                        name="lastName"
+                        type="text"
+                        placeholder="Last Name"
+                        className={
+                          touched.lastName && errors.lastName ? "invalid" : ""
+                        }
+                      />
+                    </div>
+
+                    <div>
+                      <Field
+                        name="company"
+                        type="text"
+                        placeholder="Company"
+                        className={
+                          touched.company && errors.company ? "invalid" : ""
+                        }
+                      />
+                    </div>
+
+                    <div>
+                      <Field
+                        name="email"
+                        type="email"
+                        placeholder="Corporate Email"
+                        className={
+                          touched.email && errors.email ? "invalid" : ""
+                        }
+                      />
+                    </div>
+
+                    <div>
+                      <Select
+                        name="country"
+                        options={options}
+                        styles={{
+                          control: (provided, state) => ({
+                            ...provided,
+                            border: "none", // Убираем бордеры
+                            boxShadow: "none", // Убираем тени
+                            borderRadius: "16px", // Скруглённые углы
+                            padding: "0 10px", // Внутренние отступы
+                            fontSize: "16px",
+                            maxHeight: "48px", // Высота общего контейнера
+                            backgroundColor: "#fff", // Светлый фон
+                            "&:hover": {
+                              borderColor: "none", // Убираем ховер-бордер
+                            },
+                          }),
+                          input: (provided) => ({
+                            ...provided,
+                            height: "48px", // Высота поля ввода
+                            margin: "0",
+                            padding: "0",
+                          }),
+                          placeholder: (provided) => ({
+                            ...provided,
+                            color: "#444444", // Цвет плейсхолдера
+                            fontSize: "16px",
+                          }),
+                          singleValue: (provided) => ({
+                            ...provided,
+                            color: "#333", // Цвет выбранного значения
+                          }),
+                          dropdownIndicator: (provided) => ({
+                            ...provided,
+                            color: "#444444", // Цвет индикатора
+                            "&:hover": {
+                              color: "#444444", // Убираем ховер на индикаторе
+                            },
+                          }),
+                          indicatorSeparator: () => ({
+                            display: "none", // Убираем разделитель
+                          }),
+                          menu: (provided) => ({
+                            ...provided,
+                            backgroundColor: "#fff", // Белый фон выпадающего списка
+                            border: "none", // Убираем бордер
+                            borderRadius: "16px", // Скруглённые углы
+                            marginTop: "5px",
+                          }),
+                          menuList: (provided) => ({
+                            ...provided,
+                            padding: "5px",
+                          }),
+                          option: (provided, state) => ({
+                            ...provided,
+                            backgroundColor: state.isSelected
+                              ? "#47B782" // Зелёный фон для выбранного
+                              : state.isFocused
+                              ? "#47B782" // Светло-зелёный при наведении
+                              : "#fff", // Белый фон по умолчанию
+                            color: state.isSelected ? "#fff" : "#333", // Цвет текста
+                            padding: "10px", // Отступы внутри
+                            borderRadius: "16px", // Скруглённые углы для элементов
+                            cursor: "pointer",
+                            "&:hover": {
+                              backgroundColor: "#47B782", // Светло-зелёный ховер
+                              
+                            },
+                          }),
+                        }}
+                        className={`form-field ${
+                          touched.country && errors.country ? "invalid" : ""
+                        }`}
+                        onChange={(option) => setFieldValue("country", option.value)}
+                        placeholder="Country"
+                        value={options.find((option) => option.value === values.country)}
+                      />
+
+                      {/* <ErrorMessage name="country" component="div" className="error" /> */}
+                    </div>
+
+
+                    <div>
+                      <PhoneInput
+                        country={countryCode}
+                        value={values.phone}
+                        onChange={(value) => setFieldValue("phone", value)}
+                        placeholder="Phone"
+                        className={
+                          touched.phone && errors.phone ? "invalid" : ""
+                        }
+                      />
+                    </div>
+
+                    <div className="full">
+                      <Field
+                        name="message"
+                        as="textarea"
+                        placeholder="Message"
+                        className="small"
+                      />
+                    </div>
+
+                    <div
+                      className={`full checkbox ${
+                        touched.agreement && errors.agreement ? "invalid" : ""
+                      }`}
+                    >
+                      <label>
+                        <Field type="checkbox" name="agreement" />
+                        <span>
+                          <CheckboxIcon />
+                          <span>
+                            I agree to the processing of my data according to
+                            the Privacy Policy.
+                          </span>
+                        </span>
+                      </label>
+                      {/* <ErrorMessage
+                        name="agreement"
+                        component="div"
+                        className="error"
+                      /> */}
+                    </div>
+
+                    <button
+                      type="submit"
+                      className="button"
+                      disabled={isSubmitting}
+                    >
+                      <span>Submit</span>
+                      <ButtonIcon />
+                    </button>
+
+                    {Object.keys(errors).length > 0 && (
+                      <div className="submit-error">
+                        This field is required.
+                      </div>
+                    )}
+                  </Form>
+                </div>
+              </div>
             </div>
           </div>
         )}
