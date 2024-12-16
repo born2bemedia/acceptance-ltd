@@ -9,7 +9,7 @@ const IndustriesHero = () => {
       <div className="industries-hero__inner container">
         <div className="industries-hero__top">
           <h1 className="fadeInUp">Comprehensive Expertise Across Leading Industries</h1>
-
+          <hr/>
           <div className="content">
             <p className="fadeInUp">
               Specialised solutions tailored to the unique challenges of diverse
