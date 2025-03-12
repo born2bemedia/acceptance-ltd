@@ -4,93 +4,64 @@ import React from "react";
 const IndustriesLoop = () => {
   const services = [
     {
-      title:
-        "Business Consulting (Personnel Management, Marketing, HR, Real Estate)",
+      title: "Business Consulting",
+      business: [
+        "Business Consulting (including Personnel Management, Marketing, HR, Real Estate)",
+        "Tax & Insurance Consulting",
+        "Marketing Consulting (Digital Advertising)",
+        "PR Agency / PR Consulting / Digital Marketing",
+      ],
       description:
-        "For consulting firms, we ensure smooth, compliant operations and optimise financial flows to support expansion and client trust. Our services include regulatory compliance, tax optimization, and legal structuring.",
+        "For consulting firms, we ensure smooth, compliant operations and optimize financial flows to support expansion and client trust. Our expertise helps consulting businesses maintain transparency, meet regulatory requirements, and structure their financial activities effectively to avoid compliance risks and operational inefficiencies.",
       expertise: [
-        "Ensuring compliance with labour and employment regulations in HR consulting.",
-        "Optimising financial structures for real estate and marketing agencies.",
-        "Providing legal advisory on contracts and personnel management.",
+        "<b>Regulatory Compliance & Risk Management</b> – Ensuring compliance with labor, employment, and industry-specific regulations for HR, real estate, and marketing consultancies.",
+        "<b>Optimizing Financial Structures</b> – Developing stable financial frameworks to support long-term partnerships and ensure proper tax planning and reporting.",
+        "<b>Legal Structuring & Contract Advisory</b> – Assisting with contract negotiations, personnel management, and agreements to secure smooth business operations.",
+        "<b>Banking & Transaction Management</b> – Supporting consulting firms in setting up banking structures aligned with their financial flows and business needs.",
+        "<b>Tax Planning & Reporting</b> – Helping firms maintain transparent financial reporting and tax compliance to avoid regulatory risks.",
       ],
     },
     {
-      title: "Tax, Insurance & Financial Consulting",
+      title: "E-commerce Basic",
+      business: [
+        "Financial Education",
+        "Dietetics / Nutriciology",
+        "Astrology Services",
+        "GhostWriting / Autobiography",
+        "Software Reseller (including 3D)",
+      ],
       description:
-        "We assist financial consulting firms by streamlining compliance with tax regulations and optimising insurance underwriting processes. Our expertise allows companies to focus on core services while we manage legal and financial complexities.",
+        "E-commerce businesses must navigate financial regulations, manage high transaction volumes, and ensure operational stability. We help companies maintain legal and financial compliance, optimize payment structures, and address banking challenges efficiently. Our expertise supports businesses that rely on payment processors, B2B transactions, and customer payment accounts, ensuring smooth financial operations and risk mitigation.",
       expertise: [
-        "Tax compliance and reporting for financial advisory firms.",
-        "Ensuring legal compliance with insurance underwriting processes.",
-        "Financial restructuring for optimal growth in consulting services.",
+        "<b>Regulatory Compliance & Risk Management</b> – Ensuring adherence to financial and payment regulations to prevent account closures and maintain operational continuity.",
+        "<b>Financial Flow Optimization</b> – Structuring transactions efficiently, minimizing chargeback risks, and ensuring stable payment processing.",
+        "<b>Tax Structuring & Reporting</b> – Supporting tax compliance and planning for online retail businesses to optimize financial performance.",
+        "<b>Legal Advisory & Dispute Resolution</b> – Assisting with contractual matters, resolving customer disputes, and managing reputational risks.",
+        "<b>Banking & Payment Account Management</b> – Helping e-commerce businesses establish and maintain payment accounts while addressing potential provider concerns",
       ],
     },
     {
-      title: "Marketing & PR Consulting (Digital Marketing, PR, Advertising)",
-      description:
-        "Marketing and PR firms face unique challenges in compliance and regulatory standards. Our services ensure your campaigns and contracts adhere to legal standards, enabling efficient financial growth.",
-      expertise: [
-        "Ensuring compliance with advertising and PR industry regulations.",
-        "Legal structuring of contracts for digital marketing campaigns.",
-        "Financial advisory on project profitability and scalability.",
+      title: "E-commerce High-Ticket",
+      business: [
+        "IT Consulting / CRM Development",
+        "GhostWriting / Autobiography / Copywriting",
+        "Web Development / Web Design",
+        "Cybersecurity Services",
       ],
-    },
-    {
-      title: "E-commerce (Basic & High-Ticket)",
       description:
-        "In the fast-paced e-commerce sector, we ensure legal and financial compliance across jurisdictions, especially for high-ticket transactions. Our services help streamline operations, manage financial flows, and provide legal protection.",
+        "Companies selling high-value goods and services directly to consumers face unique financial and operational risks. Payment processors and financial institutions scrutinize large transactions more closely, increasing the likelihood of account reviews, chargeback disputes, and compliance challenges. We help businesses operating in high-ticket e-commerce structure their financial flows, maintain banking stability, and navigate legal and regulatory complexities.",
       expertise: [
-        "Cross-border compliance for international e-commerce operations.",
-        "Financial advisory and tax structuring for online retail businesses.",
-        "Legal protection and advisory for high-ticket transactions.",
-      ],
-    },
-    {
-      title: "Health & Wellness Services (Dietetics, Nutrition, Astrology)",
-      description:
-        "The health and wellness industry requires careful legal compliance and financial management. We help businesses in this sector adhere to industry-specific regulations and optimise financial performance.",
-      expertise: [
-        "Compliance with health and wellness regulations, including dietetics and nutrition.",
-        "Financial optimization for service scalability and growth.",
-        "Legal advisory for partnerships and service contracts.",
-      ],
-    },
-    {
-      title:
-        "Writing & Content Creation (Ghostwriting, Autobiography, Copywriting)",
-      description:
-        "We provide tailored compliance and financial advisory services for content creators and agencies to ensure growth without legal risk. We focus on structuring contracts and managing financial flows effectively.",
-      expertise: [
-        "Ensuring compliance with intellectual property and copyright laws.",
-        "Optimising financial structures for content creation agencies.",
-        "Legal advisory for ghostwriting and publishing contracts.",
-      ],
-    },
-    {
-      title:
-        "IT & Software Services (IT Consulting, CRM Development, Software Reselling)",
-      description:
-        "IT and software companies face a complex regulatory landscape. Our advisory services ensure these businesses remain compliant while optimising their financial performance and scalability.",
-      expertise: [
-        "Navigating data privacy laws and IT regulations.",
-        "Financial optimization for software development and reselling.",
-        "Legal advisory for software licensing and CRM development.",
-      ],
-    },
-    {
-      title:
-        "Web & Digital & Cybersecurity Services (Web Development, Cybersecurity Solutions)",
-      description:
-        "Web and digital companies need a balance of legal compliance and financial health to thrive. Our services support managing regulatory risks, protecting sensitive data, and optimising financial operations.",
-      expertise: [
-        "Ensuring compliance with data security and privacy regulations.",
-        "Financial structuring for web development and digital services.",
-        "Legal advisory on cybersecurity solutions and contracts.",
+        "<b>Regulatory Compliance & Risk Mitigation</b> – Ensuring businesses comply with payment regulations, reducing the risk of account freezes and transaction disputes.",
+        "<b>Managing Large Transaction Volumes</b> – Structuring financial operations to support high-value payments while minimizing fraud and chargeback risks.",
+        "<b>Banking & Payment Account Support</b> – Assisting in opening and maintaining banking relationships, ensuring uninterrupted payment processing.",
+        "<b>Tax Structuring & Financial Reporting</b> – Advising on tax planning and compliance to optimize cash flow and meet jurisdictional requirements.",
+        "<b>Legal Advisory & Dispute Resolution</b> – Addressing contract-related issues, managing consumer complaints, and handling payment disputes effectively.",
       ],
     },
   ];
 
   return (
-    <section className="solutions-loop">
+    <section className="industries-loop">
       <div className="container">
         {services.map((service, index) => (
           <div className="solution fadeInUp" key={index}>
@@ -99,19 +70,41 @@ const IndustriesLoop = () => {
                 <b>{String(index + 1).padStart(2, "0")}</b>
                 <span>{service.title}</span>
               </h4>
-              <img src="/images/tabArrow.svg" />
+              <img src="/images/downArrow.svg" />
             </div>
+            <h2 className="title">
+              <b>{String(index + 1).padStart(2, "0")}</b>
+            </h2>
             <div className="solution-info">
-              <div>
+              <div className="left">
+                <h4 className="title">
+                  <span>{service.title}</span>
+                </h4>
+                <h5>Businesses:</h5>
+                <ul>
+                  {service.business.map((businessService, i) => (
+                    <li
+                      key={i}
+                      dangerouslySetInnerHTML={{ __html: businessService }}
+                    />
+                  ))}
+                </ul>
                 <p>{service.description}</p>
-                <h4>Included Services:</h4>
+              </div>
+              <div className="right">
+                <h5>Our Expertise:</h5>
                 <ul>
                   {service.expertise.map((expertiseService, i) => (
-                    <li key={i}>{expertiseService}</li>
+                    <li
+                      key={i}
+                      dangerouslySetInnerHTML={{ __html: expertiseService }}
+                    />
                   ))}
                 </ul>
               </div>
-              <OrderButton serviceName={service.title} />
+              <div className="solution-bottom">
+                <OrderButton serviceName={service.title} />
+              </div>
             </div>
           </div>
         ))}
