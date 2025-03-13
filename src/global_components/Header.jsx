@@ -2,85 +2,97 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import "@/style/header.scss";
-
+import { usePathname } from "next/navigation";
 function Header() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-    };
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
-    useEffect(() => {
-        if (isMenuOpen) {
-            document.body.classList.add('menu-open', 'no-scroll');
-        } else {
-            document.body.classList.remove('menu-open', 'no-scroll');
-        }
-    }, [isMenuOpen]);
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.classList.add("menu-open", "no-scroll");
+    } else {
+      document.body.classList.remove("menu-open", "no-scroll");
+    }
+  }, [isMenuOpen]);
 
-    return (
-        <header className="header"> 
-            <div className="header__inner container">
-                <Link href="/" className="logo">
-                    <img src="/images/Acceptance-logo.svg" width={128} alt="logo" />
-                </Link>
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
 
-                <nav>
-                    <ul>
-                        <li>
-                            <Link href="/solutions">Solutions</Link>
-                        </li>
-                        <li>
-                            <Link href="/industries">Industries</Link>
-                        </li>
-                        <li>
-                            <Link href="/company">Company</Link>
-                        </li>
-                        <li>
-                            <Link href="/insights">Insights</Link>
-                        </li>
-                        <li>
-                            <Link href="/faq">FAQ</Link>
-                        </li>
-                    </ul>
-                </nav>
+  return (
+    <header className="header">
+      <div className="header__inner container">
+        <Link href="/" className="logo">
+          <img src="/images/Acceptance-logo.svg" width={128} alt="logo" />
+        </Link>
 
-                <Link href="/contact-us" className="button-header button">Contact us</Link>
+        <nav>
+          <ul>
+            <li>
+              <Link href="/solutions">Solutions</Link>
+            </li>
+            <li>
+              <Link href="/industries">Industries</Link>
+            </li>
+            <li>
+              <Link href="/company">Company</Link>
+            </li>
+            <li>
+              <Link href="/insights">Insights</Link>
+            </li>
+            <li>
+              <Link href="/faq">FAQ</Link>
+            </li>
+          </ul>
+        </nav>
 
-                <div className={`hamburger_button ${isMenuOpen ? 'menu-open' : ''}`} onClick={toggleMenu}>
-                    <div className={`line-1 ${isMenuOpen ? 'open' : ''}`}></div>
-                    <div className={`line-2 ${isMenuOpen ? 'open' : ''}`}></div>
-                    <div className={`line-3 ${isMenuOpen ? 'open' : ''}`}></div>
-                </div>
+        <Link href="/contact-us" className="button-header button">
+          Contact us
+        </Link>
 
-                <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
-                    <div className="mobile-menu__inner">
-                        <nav>
-                            <ul>
-                                <li>
-                                    <Link href="/solutions">Solutions</Link>
-                                </li>
-                                <li>
-                                    <Link href="/industries">Industries</Link>
-                                </li>
-                                <li>
-                                    <Link href="/company">Company</Link>
-                                </li>
-                                <li>
-                                    <Link href="/insights">Insights</Link>
-                                </li>
-                                <li>
-                                    <Link href="/faq">FAQ</Link>
-                                </li>
-                            </ul>
-                        </nav>
+        <div
+          className={`hamburger_button ${isMenuOpen ? "menu-open" : ""}`}
+          onClick={toggleMenu}
+        >
+          <div className={`line-1 ${isMenuOpen ? "open" : ""}`}></div>
+          <div className={`line-2 ${isMenuOpen ? "open" : ""}`}></div>
+          <div className={`line-3 ${isMenuOpen ? "open" : ""}`}></div>
+        </div>
 
-                        <Link href="/contact-us" className="button-header button">Contact us</Link>
-                    </div>
-                </div>
-            </div>
-        </header>
-    );
+        <div className={`mobile-menu ${isMenuOpen ? "open" : ""}`}>
+          <div className="mobile-menu__inner">
+            <nav>
+              <ul>
+                <li>
+                  <Link href="/solutions">Solutions</Link>
+                </li>
+                <li>
+                  <Link href="/industries">Industries</Link>
+                </li>
+                <li>
+                  <Link href="/company">Company</Link>
+                </li>
+                <li>
+                  <Link href="/insights">Insights</Link>
+                </li>
+                <li>
+                  <Link href="/faq">FAQ</Link>
+                </li>
+              </ul>
+            </nav>
+
+            <Link href="/contact-us" className="button-header button">
+              Contact us
+            </Link>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
 }
 
 export default Header;
