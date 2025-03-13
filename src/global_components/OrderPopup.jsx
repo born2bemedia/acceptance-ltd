@@ -168,7 +168,7 @@ function RequestPopup() {
             <div className="overlay" onClick={() => closePopup(resetForm)}></div>
             <div className="popup-inner">
               <div className="popup-top">
-                <h2>{serviceValue} REQUEST</h2>
+                <h2>{serviceValue} request</h2>
                 <img
                   src="/images/closePopup.svg"
                   className="popup-close"

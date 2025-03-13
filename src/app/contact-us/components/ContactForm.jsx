@@ -225,7 +225,7 @@ const ContactForm = () => {
 
             <div
               className={`form-group ${
-                errors.country && touched.country ? "invalid" : ""
+                errors.country && touched.country ? "" : ""
               }`}
             >
               <Select
