@@ -134,6 +134,17 @@ const SolutionsLoop = () => {
         "Selection and support of responsible persons",
       ],
     },
+    {
+      title: "Company Support",
+      description:
+        "Ensure seamless business operations with full reporting, tax compliance, and proper company management. We handle all necessary filings, renewals, and legal formalities, allowing you to focus on business growth while staying compliant. If a company ceases operations, we oversee the legal closure process, ensuring all obligations are met.",
+      includedServices: [
+        "Submission and maintenance of required reports",
+        "Tax and fee payments management",
+        "Timely company renewals and data updates in corporate registers",
+        "Legal closure of companies, including final reporting and payments",
+      ],
+    },
   ];
 
   return (
