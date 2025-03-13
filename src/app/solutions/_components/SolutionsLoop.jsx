@@ -1,6 +1,7 @@
 "use client";
 import OrderButton from "@/global_components/OrderButton";
 import React from "react";
+import SolutionTab from "./SolutionTab";
 
 const SolutionsLoop = () => {
   const services = [
@@ -22,16 +23,21 @@ const SolutionsLoop = () => {
         "Jurisdiction selection",
         "Business registration",
         "Initial legal documentation",
+        "Company Formation and Structuring",
       ],
     },
     {
       title: "Bank Account Opening",
       description:
-        "Establishing secure, fully operational bank accounts for your business and giving you access to essential financial services like SEPA and SWIFT. Accounts are set up to optimize cash flow and international operations.",
+        "Opening 4 to 6 bank accounts to ensure seamless transactions via SEPA, SWIFT, and UK Local systems. We conduct 10 to 12 verification processes with financial institutions to secure accounts that meet your business needs, optimizing financial operations and payment flexibility.",
       includedServices: [
         "Multiple account openings (SEPA, SWIFT, local systems)",
         "Verification assistance",
         "Ongoing banking relationship management",
+        "Bank account closure assistance",
+        "Financial flow analysis",
+        "Client-based banking strategy support",
+        "Compliance monitoring for banking",
       ],
     },
     {
@@ -42,6 +48,7 @@ const SolutionsLoop = () => {
         "Financial risk management",
         "Profitability optimization",
         "Investment strategy advisory",
+        "Legal support",
       ],
     },
     {
@@ -62,6 +69,7 @@ const SolutionsLoop = () => {
         "Bookkeeping",
         "Financial reporting",
         "Payroll management",
+        "Tax compliance management",
       ],
     },
     {
@@ -122,6 +130,8 @@ const SolutionsLoop = () => {
         "Director training",
         "Interview preparation",
         "Compliance guidance",
+        "Selection and support of nominee directors",
+        "Selection and support of responsible persons",
       ],
     },
   ];
@@ -130,27 +140,7 @@ const SolutionsLoop = () => {
     <section className="solutions-loop">
       <div className="container">
         {services.map((service, index) => (
-          <div className="solution fadeInUp" key={index}>
-            <div className="solution-top">
-              <h4>
-                <b>{String(index + 1).padStart(2, "0")}</b>
-                <span>{service.title}</span>
-              </h4>
-              <img src="/images/tabArrow.svg" />
-            </div>
-            <div className="solution-info">
-              <div>
-                <p>{service.description}</p>
-                <h4>Included Services:</h4>
-                <ul>
-                  {service.includedServices.map((includedService, i) => (
-                    <li key={i}>{includedService}</li>
-                  ))}
-                </ul>
-              </div>
-              <OrderButton serviceName={service.title} />
-            </div>
-          </div>
+          <SolutionTab key={index} index={index} service={service} />
         ))}
       </div>
     </section>
