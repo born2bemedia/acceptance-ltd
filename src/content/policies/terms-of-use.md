@@ -6,6 +6,9 @@
 
 Welcome to Acceptance LTD, operating under the brand Aceptanta. These Terms of Use govern your use of our website and the services provided by Aceptanta. You agree to comply with these terms by accessing or using our website. If you do not agree with any part of these terms, please do not use our services.
 
+Acceptance Solutions Group LLC is a registered company in Nevis, West Indies, with its official address at Hamilton Development, Unit B, Charlestown, Nevis, West Indies. Company registration number: L23233. For any inquiries, please contact us at info@aceptanta.com.
+
+
 These Terms of Use outline the rules and regulations for using Aceptanta's services, including but not limited to compliance, legal support, and consulting services. We encourage you to read these terms carefully before using our website or engaging with our services.
 
 ### Content Usage, Limitations, and Privacy Policy
@@ -63,6 +66,10 @@ We reserve the right to update or modify these Terms of Use at any time at our s
 ### Jurisdiction and Governing Law
 
 These Terms of Use, as well as any disputes or claims arising out of or in connection with them or your use of our services, shall be governed and construed by the laws of [ Jurisdiction]. By accessing and using our website or services, you agree that any legal action or proceedings relating to these Terms of Use shall be brought exclusively in the courts of [ Jurisdiction]. We reserve the right to initiate and pursue legal proceedings in the appropriate jurisdiction.
+
+### Jurisdiction and Governing Law
+
+These Terms of Use, as well as any disputes or claims arising out of or in connection with them or your use of our services, shall be governed and construed by the laws of **Nevis, West Indies**. By accessing and using our website or services, you agree that any legal action or proceedings relating to these Terms of Use shall be brought exclusively in the courts of **Nevis, West Indies**. We reserve the right to initiate and pursue legal proceedings in the appropriate jurisdiction.
 
 ### Contact Us
 

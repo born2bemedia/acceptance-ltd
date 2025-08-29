@@ -4,6 +4,14 @@
 
 At Acceptance LTD (“Aceptanta”), we are committed to protecting your privacy and ensuring that your personal information is handled securely and transparently. Acceptance LTD, the company operating under the brand name Aceptanta, is dedicated to safeguarding your data when you use our services or interact with our website.
 
+Company Details:
+
+- Company Name: Acceptance Solutions Group LLC
+- Registration Number: L23233
+- Registered Address: Hamilton Development, Unit B, Charlestown, Nevis, West Indies
+- Contact Email: info@aceptanta.com
+
+
 This Privacy Policy outlines how we collect, use, store, and protect your personal information and explains your rights regarding the data we process. You agree to the practices described in this policy when using our services. If you have any questions or concerns, please contact us using the information above.
 
 ### Collection and Use of Personal Data
