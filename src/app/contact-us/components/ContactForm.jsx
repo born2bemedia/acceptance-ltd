@@ -6,8 +6,10 @@ import PhoneInput from "react-phone-input-2";
 import Select from "react-select";
 import "react-phone-input-2/lib/style.css";
 import countryList from "react-select-country-list";
+import ReCaptcha from 'react-google-recaptcha';
 
 const ContactForm = () => {
+  const [isCaptchaVerified, setIsCaptchaVerified] = useState(false);
   const [submissionStatus, setSubmissionStatus] = useState(null);
   const closeSuccessMessage = () => setSubmissionStatus(null);
 
@@ -103,6 +105,10 @@ const ContactForm = () => {
     message: "",
     agree: false,
   };
+
+  const handleCaptchaChange = (token) => {
+    setIsCaptchaVerified(!!token)
+  }
 
   const handleSubmit = async (
     values,
@@ -350,8 +356,8 @@ const ContactForm = () => {
                 Policy.
               </label>
             </div>
-
-            <button type="submit" className="btn btn-primary">
+            <ReCaptcha sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY} onChange={handleCaptchaChange} />
+            <button type="submit" className="btn btn-primary" disabled={!isCaptchaVerified}>
               Submit
             </button>
 
