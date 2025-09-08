@@ -4,58 +4,36 @@ import React from "react";
 const IndustriesLoop = () => {
   const services = [
     {
-      title: "Business Consulting",
-      business: [
-        "Business Consulting (including Personnel Management, Marketing, HR, Real Estate)",
-        "Tax & Insurance Consulting",
-        "Marketing Consulting (Digital Advertising)",
-        "PR Agency / PR Consulting / Digital Marketing",
-      ],
+      title: "E-commerce",
       description:
-        "For consulting firms, we ensure smooth, compliant operations and optimize financial flows to support expansion and client trust. Our expertise helps consulting businesses maintain transparency, meet regulatory requirements, and structure their financial activities effectively to avoid compliance risks and operational inefficiencies.",
+        "E-commerce businesses operate in fast-paced, competitive markets where international compliance, payment processing, and operational efficiency are critical. Our services help online stores, marketplaces, and service platforms manage regulatory obligations, streamline transactions, and establish a reliable presence abroad.",
       expertise: [
-        "<b>Regulatory Compliance & Risk Management</b> – Ensuring compliance with labor, employment, and industry-specific regulations for HR, real estate, and marketing consultancies.",
-        "<b>Optimizing Financial Structures</b> – Developing stable financial frameworks to support long-term partnerships and ensure proper tax planning and reporting.",
-        "<b>Legal Structuring & Contract Advisory</b> – Assisting with contract negotiations, personnel management, and agreements to secure smooth business operations.",
-        "<b>Banking & Transaction Management</b> – Supporting consulting firms in setting up banking structures aligned with their financial flows and business needs.",
-        "<b>Tax Planning & Reporting</b> – Helping firms maintain transparent financial reporting and tax compliance to avoid regulatory risks.",
+        "Structuring cross-border operations to comply with local and international tax requirements.",
+        "Assistance with opening corporate bank accounts and integrating payment systems.",
+        "Support in establishing legal addresses, offices, and corporate representation.",
+        "Ongoing guidance for corporate compliance and financial reporting.",
       ],
     },
     {
-      title: "E-commerce Basic",
-      business: [
-        "Financial Education",
-        "Dietetics / Nutriciology",
-        "Astrology Services",
-        "GhostWriting / Autobiography",
-        "Software Reseller (including 3D)",
-      ],
+      title: "IT Companies and Startups",
       description:
-        "E-commerce businesses must navigate financial regulations, manage high transaction volumes, and ensure operational stability. We help companies maintain legal and financial compliance, optimize payment structures, and address banking challenges efficiently. Our expertise supports businesses that rely on payment processors, B2B transactions, and customer payment accounts, ensuring smooth financial operations and risk mitigation.",
+        "IT firms and startups, including SaaS providers and AI-driven projects, need flexible, scalable solutions that balance regulatory compliance with innovation. We help technology companies navigate legal, financial, and operational challenges when expanding internationally.",
       expertise: [
-        "<b>Regulatory Compliance & Risk Management</b> – Ensuring adherence to financial and payment regulations to prevent account closures and maintain operational continuity.",
-        "<b>Financial Flow Optimization</b> – Structuring transactions efficiently, minimizing chargeback risks, and ensuring stable payment processing.",
-        "<b>Tax Structuring & Reporting</b> – Supporting tax compliance and planning for online retail businesses to optimize financial performance.",
-        "<b>Legal Advisory & Dispute Resolution</b> – Assisting with contractual matters, resolving customer disputes, and managing reputational risks.",
-        "<b>Banking & Payment Account Management</b> – Helping e-commerce businesses establish and maintain payment accounts while addressing potential provider concerns",
+        "Ensuring compliance with data protection, intellectual property, and cybersecurity regulations.",
+        "Corporate structuring and financial planning for software development and tech services.",
+        "Legal support for contracts, partnerships, and licensing agreements.",
+        "Assistance with international incorporation and ongoing administrative support.",
       ],
     },
     {
-      title: "E-commerce High-Ticket",
-      business: [
-        "IT Consulting / CRM Development",
-        "GhostWriting / Autobiography / Copywriting",
-        "Web Development / Web Design",
-        "Cybersecurity Services",
-      ],
+      title: "Consulting and Business Services",
       description:
-        "Companies selling high-value goods and services directly to consumers face unique financial and operational risks. Payment processors and financial institutions scrutinize large transactions more closely, increasing the likelihood of account reviews, chargeback disputes, and compliance challenges. We help businesses operating in high-ticket e-commerce structure their financial flows, maintain banking stability, and navigate legal and regulatory complexities.",
+        "Consulting and professional services firms rely on credibility, trust, and smooth operations to build their reputation. We provide solutions that secure proper legal structure, financial clarity, and efficient corporate administration across borders.",
       expertise: [
-        "<b>Regulatory Compliance & Risk Mitigation</b> – Ensuring businesses comply with payment regulations, reducing the risk of account freezes and transaction disputes.",
-        "<b>Managing Large Transaction Volumes</b> – Structuring financial operations to support high-value payments while minimizing fraud and chargeback risks.",
-        "<b>Banking & Payment Account Support</b> – Assisting in opening and maintaining banking relationships, ensuring uninterrupted payment processing.",
-        "<b>Tax Structuring & Financial Reporting</b> – Advising on tax planning and compliance to optimize cash flow and meet jurisdictional requirements.",
-        "<b>Legal Advisory & Dispute Resolution</b> – Addressing contract-related issues, managing consumer complaints, and handling payment disputes effectively.",
+        "Guidance on international business registration and licensing requirements.",
+        "Support for financial compliance, reporting, and auditing.",
+        "Legal advisory for contracts, agreements, and corporate governance.",
+        "Nominee and administrative services to maintain compliance in foreign jurisdictions.",
       ],
     },
   ];
@@ -80,15 +58,6 @@ const IndustriesLoop = () => {
                 <h4 className="title">
                   <span>{service.title}</span>
                 </h4>
-                <h5>Businesses:</h5>
-                <ul>
-                  {service.business.map((businessService, i) => (
-                    <li
-                      key={i}
-                      dangerouslySetInnerHTML={{ __html: businessService }}
-                    />
-                  ))}
-                </ul>
                 <p>{service.description}</p>
               </div>
               <div className="right">

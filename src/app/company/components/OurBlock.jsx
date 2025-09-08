@@ -22,12 +22,12 @@ const OurBlock = () => {
                     <div className="items">
                         <div className="item fadeInUp">
                             <h3>Our mission</h3>
-                            <p>Providing expert compliance, legal, and financial solutions, empowering businesses to operate efficiently and securely across borders.</p>
+                            <p>To provide expert legal, financial, and compliance solutions, helping e-commerce, IT, startups, and consulting firms operate efficiently and securely worldwide.</p>
                         </div>
                         <hr />
                         <div className="item fadeInUp">
                             <h3>Our vision</h3>
-                            <p>To be the trusted partner for businesses worldwide, known for simplifying complex regulatory landscapes and ensuring seamless international operations.</p>
+                            <p>To be the trusted partner for businesses across industries, simplifying regulations and ensuring seamless international operations.</p>
                         </div>
                     </div>
 
