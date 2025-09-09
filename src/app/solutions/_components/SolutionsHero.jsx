@@ -19,13 +19,13 @@ const SolutionsHero = () => {
           </h1>
           <span></span>
           <p className="fadeInUp">
-            Comprehensive solutions for every phase of your business journey,
-            from <br />
-            company formation to closure. Whether you're expanding locally or{" "}
+            Comprehensive solutions for every phase of your business journey –
             <br />
-            internationally, we are your trusted partner in ensuring smooth,
-            compliant, <br />
-            and efficient operations at every step.
+            from company formation to closure. Whether you’re entering new
+            <br />
+            markets or expanding internationally, we are your trusted partner in
+            <br />
+            ensuring compliant and efficient operations at every step.
           </p>
         </div>
       </div>
