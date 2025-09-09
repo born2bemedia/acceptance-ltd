@@ -58,8 +58,8 @@ const items = [
           <div className="col-content fadeInUp">
             <h3>Core Solutions for Global Business</h3>
             <p>End-to-end support for company formation, banking, accounting, and compliance – everything you need to establish, run, and scale your business internationally. </p>
-            <Link href="/industries" className="button">
-              Check Industries
+            <Link href="/solutions" className="button">
+            Check Solutions
               <ButtonIcon />
             </Link>
           </div>
