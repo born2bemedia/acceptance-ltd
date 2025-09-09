@@ -13,45 +13,24 @@ import "swiper/css/navigation";
 
 const slidesData = [
   {
-    title: "Business Consulting",
-    text: "Expert support for personnel management, marketing, HR, and real estate firms, focusing on compliance and efficient operations tailored to client needs.",
+    title: "E-Commerce & Digital Business",
+    text: "From online stores to global marketplaces and SaaS platforms – tailored support for fast-growing businesses entering international markets.",
     color: "#F4F4F4",
     textColor: "#0A0A0A",
     numberColor: "#47B782",
   },
   {
-    title: "Tax, Insurance & Finance",
-    text: "Guidance for businesses navigating tax regulations, insurance requirements, and financial planning to optimise financial structure and minimise risks.",
+    title: "IT, Startups & Technology",
+    text: "Comprehensive solutions for software companies, AI projects, and tech startups seeking efficient structures, banking, and compliance worldwide.",
     color: "#143F34",
     textColor: "#FFFFFF",
     numberColor: "#47B782",
   },
   {
-    title: "Marketing & PR Consulting",
-    text: "Specialised solutions for digital marketing, public relations, and advertising agencies to enhance their operational efficiency and compliance with regulations.",
+    title: "Consulting & Professional Services",
+    text: "End-to-end assistance for business consultants, service providers, and advisory firms expanding across borders with secure and compliant operations. ",
     color: "#F4F4F4",
     textColor: "#0A0A0A",
-    numberColor: "#47B782",
-  },
-  {
-    title: "Local and Global <br/>E-commerce",
-    text: "Comprehensive services for both basic and high-ticket e-commerce businesses, ensuring streamlined financial operations and customer satisfaction.",
-    color: "#47B782",
-    textColor: "#FFFFFF",
-    numberColor: "#8AEE99",
-  },
-  {
-    title: "Consulting Services",
-    text: "Consulting services for organizations to streamline processes, improve efficiency, and drive business growth.",
-    color: "#F4F4F4",
-    textColor: "#0A0A0A",
-    numberColor: "#47B782",
-  },
-  {
-    title: "Financial Planning",
-    text: "Strategic financial planning services for businesses to ensure financial stability and growth.",
-    color: "#143F34",
-    textColor: "#FFFFFF",
     numberColor: "#47B782",
   },
 ];
@@ -82,7 +61,7 @@ const HomeIndustriesWeServe = () => {
               slidesPerView: 2,
             },
             1280: {
-              slidesPerView: 4,
+              slidesPerView: 3,
             },
           }}
         >

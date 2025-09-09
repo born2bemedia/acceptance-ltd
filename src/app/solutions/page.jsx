@@ -23,7 +23,7 @@ export default function solutions() {
       <ExpertSupport
         title={"YOUR BUSINESS,YOUR SOLUTIONS"}
         text={
-          "The services and solutions outlined above are customizable to meet your business's unique needs. This is not an exhaustive list of services included in each solution. If you require further details or have specific requirements, please request a consultation with one of our experts."
+          "Our services are fully customizable to your business needs. Contact us to receive a personalized quote. You can also select additional services to create a solution tailored to your specific business needs. "
         }
       />
       <RequestPopup />

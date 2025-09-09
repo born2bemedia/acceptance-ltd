@@ -8,46 +8,46 @@ const items = [
       icon: <CompanyFormationIcon />,
       title: (
         <>
-          Company Formation
+          Company <br/>Setup
         </>
       ),
-      description: "Assistance in selecting the optimal jurisdiction and structuring for your business."
+      description: "Guidance in choosing the most suitable country and tax regime, followed by complete company incorporation with all required documents."
     },
     {
       icon: <FinancialAdvisoryIcon />,
       title: (
         <>
-          Financial Advisory
+          Nominee & Address
         </>
       ),
-      description: "Strategic advice on structuring financial flows and optimising business operations for efficiency and growth."
+      description: "Provision of trusted nominee directors or shareholders, along with legal address or office arrangements in the chosen jurisdiction."
     },
     {
       icon: <AccountingTaxServicesIcon />,
       title: (
         <>
-          Accounting & Tax Services
+          Banking & Payments
         </>
       ),
-      description: "Accurate financial reporting and monitoring to meet tax obligations and regulatory standards."
+      description: "Support in opening corporate accounts, passing compliance checks, connecting payment providers, and issuing business cards."
     },
     {
       icon: <BankingAccountManagementIcon />,
       title: (
         <>
-          Banking & Account <br /> Management
+          Accounting & <br/>Audit Support
         </>
       ),
-      description: "Support in opening, managing, and closing bank accounts based on your business needs and financial flows."
+      description: "Coordination with reliable local partners for bookkeeping, VAT reporting, annual financial statements, and audit services."
     },
     {
       icon: <ComplianceLegalSupportIcon />,
       title: (
         <>
-          Compliance & <br /> Legal Support
+          Corporate <br/>Maintenance
         </>
       ),
-      description: "Expert guidance in navigating regulatory requirements to ensure full compliance with local and international laws."
+      description: "Full administrative support for renewals, document updates, reporting, fee payments, and company liquidation when needed."
     },
   ];
   
@@ -56,8 +56,8 @@ const items = [
       <section className="core-solutions">
         <div className="core-solutions__inner container">
           <div className="col-content fadeInUp">
-            <h3>Core Solutions for Your Business</h3>
-            <p>Tailored compliance, legal, and financial services for smooth international operations, secure banking, and full regulatory compliance.</p>
+            <h3>Core Solutions for Global Business</h3>
+            <p>End-to-end support for company formation, banking, accounting, and compliance – everything you need to establish, run, and scale your business internationally. </p>
             <Link href="/industries" className="button">
               Check Industries
               <ButtonIcon />
