@@ -2,6 +2,7 @@ import "../style/global.scss";
 import Header from "../global_components/Header";
 import Footer from "../global_components/Footer";
 import { PopupsProvider } from "@/contexts/PopupsContext";
+import { CookiePopup } from "@/global_components/CookiePopup";
 
 export const metadata = {
   title: "Business Assistance & Compliance Solutions | Aceptanta",
@@ -36,6 +37,7 @@ export default function RootLayout({ children }) {
             <Header />
             <main>{children}</main>
           </div>
+          <CookiePopup />
           <Footer />
         </PopupsProvider>
       </body>
