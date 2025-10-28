@@ -5,7 +5,7 @@ const CompanyHero = () => {
         <section className="company-hero">
             <div className="company-hero__inner container">
                 <div className="top">
-                    <h1>Aceptanta</h1>
+                    <h1>About Aceptanta</h1>
                     <hr />
                     <p>We assist businesses of all sizes: from startups to global brands.</p>
                 </div>

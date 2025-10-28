@@ -4,36 +4,35 @@ import React from "react";
 const IndustriesLoop = () => {
   const services = [
     {
-      title: "E-commerce",
+      title: "E-Commerce & Digital Business",
       description:
-        "E-commerce businesses operate in fast-paced, competitive markets where international compliance, payment processing, and operational efficiency are critical. Our services help online stores, marketplaces, and service platforms manage regulatory obligations, streamline transactions, and establish a reliable presence abroad.",
+        "E-commerce businesses operate in fast-paced, competitive markets where payment processing and operational efficiency are critical. Our services help online stores, marketplaces, and service platforms manage regulatory obligations, streamline transactions, and establish a reliable presence abroad.",
       expertise: [
         "Structuring cross-border operations to comply with local and international tax requirements.",
         "Assistance with opening corporate bank accounts and integrating payment systems.",
-        "Support in establishing legal addresses, offices, and corporate representation.",
-        "Ongoing guidance for corporate compliance and financial reporting.",
+        "Support in establishing legal addresses, offices, and corporate representation."
       ],
     },
     {
-      title: "IT Companies and Startups",
+      title: "IT, Startups & Technology",
       description:
-        "IT firms and startups, including SaaS providers and AI-driven projects, need flexible, scalable solutions that balance regulatory compliance with innovation. We help technology companies navigate legal, financial, and operational challenges when expanding internationally.",
+        "IT firms and startups, including SaaS providers and AI-driven projects, need flexible, scalable solutions that balance regulatory alignment with innovation. We help technology companies navigate legal, financial, and operational challenges when expanding internationally.",
       expertise: [
-        "Ensuring compliance with data protection, intellectual property, and cybersecurity regulations.",
+        "Ensuring adherence to data protection, intellectual property, and cybersecurity regulations.",
         "Corporate structuring and financial planning for software development and tech services.",
         "Legal support for contracts, partnerships, and licensing agreements.",
         "Assistance with international incorporation and ongoing administrative support.",
       ],
     },
     {
-      title: "Consulting and Business Services",
+      title: "Consulting & Professional Services",
       description:
         "Consulting and professional services firms rely on credibility, trust, and smooth operations to build their reputation. We provide solutions that secure proper legal structure, financial clarity, and efficient corporate administration across borders.",
       expertise: [
         "Guidance on international business registration and licensing requirements.",
-        "Support for financial compliance, reporting, and auditing.",
+        "Support for financial oversight, reporting, and auditing.",
         "Legal advisory for contracts, agreements, and corporate governance.",
-        "Nominee and administrative services to maintain compliance in foreign jurisdictions.",
+        "Nominee and administrative services to meet regulatory requirements in foreign jurisdictions.",
       ],
     },
   ];

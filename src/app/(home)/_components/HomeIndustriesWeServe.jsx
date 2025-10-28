@@ -21,7 +21,7 @@ const slidesData = [
   },
   {
     title: "IT, Startups & Technology",
-    text: "Comprehensive solutions for software companies, AI projects, and tech startups seeking efficient structures, banking, and compliance worldwide.",
+    text: "Comprehensive solutions for software companies, AI projects, and tech startups seeking efficient structures, banking, and operational support worldwide.",
     color: "#143F34",
     textColor: "#FFFFFF",
     numberColor: "#47B782",

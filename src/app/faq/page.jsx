@@ -6,10 +6,10 @@ import RequestPopup from "@/global_components/RequestPopup";
 
 export const metadata = {
     title: "Frequently Asked Questions | Aceptanta",
-    description: "Find answers to common questions about our compliance and business support services at Aceptanta.",
+    description: "Find answers to common questions about Aceptanta’s business setup and operational support services.",
     openGraph: {
       title: "Frequently Asked Questions | Aceptanta",
-      description: "Find answers to common questions about our compliance and business support services at Aceptanta.",
+      description: "Find answers to common questions about Aceptanta’s business setup and operational support services.",
     },
 };
 

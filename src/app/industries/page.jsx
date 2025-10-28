@@ -7,11 +7,11 @@ import RequestPopup from "@/global_components/RequestPopup";
 import IndustriesLoop from "./_components/IndustriesLoop";
 
 export const metadata = {
-  title: "Industry-Specific Solutions| Aceptanta",
-  description: "Explore how Aceptanta delivers tailored compliance, legal, and financial advisory solutions for various industries, ensuring global business success and regulatory alignment.",
+  title: "Industry-Specific Business Setup & Support | Aceptanta",
+  description: "Discover how Aceptanta provides tailored business setup, administrative, and operational support for various industries, helping companies expand and operate efficiently worldwide.",
   openGraph: {
-    title: "Industry-Specific Solutions| Aceptanta",
-    description: "Explore how Aceptanta delivers tailored compliance, legal, and financial advisory solutions for various industries, ensuring global business success and regulatory alignment.",
+    title: "Industry-Specific Business Setup & Support | Aceptanta",
+    description: "Discover how Aceptanta provides tailored business setup, administrative, and operational support for various industries, helping companies expand and operate efficiently worldwide.",
   },
 };
 

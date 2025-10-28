@@ -86,8 +86,8 @@ export async function POST(request) {
                     <td style="padding: 50px 40px;">
                         <h3 style="font-family: 'Roboto', sans-serif; color: #141D23;font-size: 16px;font-weight: 700;line-height: 22px;margin: 0 0 25px 0;">Dear ${firstName},</h3>
                         <p style="font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: 400; line-height: 22.4px; color: #0A0A0A; margin: 20px 0;">
-                            Thank you for reaching out to Acceptance LTD. We'’'ve successfully received your request for a consultation regarding our solutions, and our team is already reviewing the details.
-                        </p>
+                            Thank you for reaching out to Aceptanta. We’ve successfully received your request for a consultation regarding our solutions, and our team is already reviewing the details.
+                            </p>
                         <p style="font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: 400; line-height: 22.4px; color: #0A0A0A; margin: 20px 0;">
                             One of our experts will contact you shortly to discuss your specific needs and provide tailored recommendations to help you move forward efficiently.
                             In the meantime, feel free to explore more about our services or reply to this email if you have any immediate questions.

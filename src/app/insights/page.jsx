@@ -7,11 +7,11 @@ import RequestPopup from "@/global_components/RequestPopup";
 import "@/style/insights.scss";
 
 export const metadata = {
-  title: "Market Insights | Aceptanta",
-  description: "Explore Aceptanta's insights on compliance, regulations, and industry trends. Stay informed with expert analysis to guide your business decisions.",
+  title: "Market Insights & Business Guidance | Aceptanta ",
+  description: "Explore Aceptanta’s insights on international business setup, operational strategies, and industry trends. Stay informed with expert analysis to guide your company’s growth and decisions.",
   openGraph: {
-    title: "Market Insights | Aceptanta",
-    description: "Explore Aceptanta's insights on compliance, regulations, and industry trends. Stay informed with expert analysis to guide your business decisions.",
+    title: "Market Insights & Business Guidance | Aceptanta ",
+    description: "Explore Aceptanta’s insights on international business setup, operational strategies, and industry trends. Stay informed with expert analysis to guide your company’s growth and decisions.",
   },
 };
 

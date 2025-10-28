@@ -8,7 +8,7 @@ const SolutionsLoop = () => {
     {
       title: "Jurisdiction Selection for Company Registration",
       description:
-        "Experts analyze your business goals and tax requirements to recommend the most suitable jurisdiction, ensuring favorable conditions and full compliance.",
+        "Experts analyze your business goals and tax requirements to recommend the most suitable jurisdiction, ensuring favorable conditions and a smooth start for your operations.",
       includedServices: [
         "Analysis of business goals and tax requirements",
         "Recommendation of a Tax Appropriate Jurisdiction",
@@ -38,7 +38,7 @@ const SolutionsLoop = () => {
     {
       title: "Business Address Setup",
       description:
-        "We assist with legal addresses or office rentals to ensure local compliance and regional presence.",
+        "We assist with legal addresses or office rentals to establish your presence and meet local requirements.",
       includedServices: [
         "Provision of a legal address",
         "Assistance with office search and rental",
@@ -48,7 +48,7 @@ const SolutionsLoop = () => {
     {
       title: "Accounting & Audit Services",
       description:
-        "We work closely with local accountants and auditors to ensure accurate reporting, VAT compliance, and the preparation of annual financial statements.",
+        "We work closely with local accountants and auditors to ensure accurate reporting, VAT handling, and preparation of annual financial statements.",
       includedServices: [
         "Engagement of local accounting firms",
         "Monthly reporting (e.g., VAT)",
@@ -58,10 +58,10 @@ const SolutionsLoop = () => {
     {
       title: "Banking Services",
       description:
-        "We help open corporate accounts, connect payment providers, and issue business cards, ensuring compliance and smooth financial operations.",
+        "We help open corporate accounts, connect payment providers, and issue business cards, ensuring smooth and efficient financial operations.",
       includedServices: [
         "Bank selection and corporate account opening",
-        "KYC and compliance coordination",
+        "KYC and business operations support",
         "PSP connection and corporate card issuance",
       ],
     },
@@ -78,10 +78,10 @@ const SolutionsLoop = () => {
     {
       title: "Company Liquidation",
       description:
-        "We manage company liquidation, handling closing documents, compliance, and final reporting for a clean closure.",
+        "We manage company liquidation, handling closing documents and final reporting to ensure a smooth and proper closure.",
       includedServices: [
         "Preparation of liquidation documents",
-        "Compliance with legal formalities",
+        "Adherence to legal formalities",
         "Filing of final reports",
       ],
     },

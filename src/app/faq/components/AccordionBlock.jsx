@@ -22,25 +22,36 @@ const AccordionBlock = () => {
         "Yes. You can choose any service from our offerings. We’ll analyse your needs and create a tailored solution, so you only pay for what you use, with complete flexibility and no pre-set packages.",
     },
     {
-      title: "Do you offer pre-packaged compliance solutions?",
+      title: "Do you offer pre-packaged solutions?",
       content:
         "No. We provide tailored solutions, analysing your needs to select the most effective approach. This ensures cost efficiency and addresses your company’s unique challenges.",
+    },
+    {
+      title: "Do you offer ongoing support for your services?",
+      content:
+        "Yes. Our experts provide flexible, month-to-month support, including regulatory monitoring, legal guidance, and other services, helping you stay proactive in managing your business.",
     },
     {
       title:
         "How do you determine the best jurisdiction for setting up a company?",
       content:
-        "We analyse your business goals, industry, and tax requirements to recommend the most suitable jurisdiction. Our approach ensures legal compliance, optimal tax conditions, and a smooth start for your international operations. ",
+        "We analyse your business goals, industry, and tax requirements to recommend the most suitable jurisdiction. Our approach ensures full legal conformity, optimal tax conditions, and a smooth start for your international operations.",
     },
-    {
-      title: "Do you offer ongoing support for your services?",
-      content:
-        "Yes. Our experts provide flexible, month-to-month support, including compliance monitoring, legal guidance, and other services, helping you stay proactive in managing your business. ",
-    },
+
     {
       title: "Can Aceptanta assist with banking solutions for my new company?",
       content:
         "Yes. We help open and manage corporate bank accounts, liaising with financial institutions and providing tailored support to meet your business banking needs.",
+    },
+    {
+      title: "In which countries does Aceptanta provide assistance?",
+      content:
+        "Aceptanta operates across 52 jurisdictions, including key regions in Europe, Asia, and selected offshore territories. We assist clients with company formation, banking, accounting, and ongoing business management through trusted local partners in each jurisdiction.",
+    },
+    {
+      title: "In what languages do you provide consultations and support?",
+      content:
+        "Our team offers consultations and support in English and Russian. This ensures clear communication and personalized guidance for clients from CIS countries, Eastern Europe, and other international markets.",
     },
   ];
 
