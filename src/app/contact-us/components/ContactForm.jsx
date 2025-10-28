@@ -7,6 +7,7 @@ import Select from "react-select";
 import "react-phone-input-2/lib/style.css";
 import countryList from "react-select-country-list";
 import ReCaptcha from 'react-google-recaptcha';
+import Link from "next/link";
 
 const ContactForm = () => {
   const [isCaptchaVerified, setIsCaptchaVerified] = useState(false);
@@ -352,8 +353,7 @@ const ContactForm = () => {
                 className="form-checkbox"
               />
               <label htmlFor="agree">
-                I agree to the processing of my data according to the Privacy
-                Policy.
+                I agree to the processing of my data according to the <Link href="/privacy-policy">Privacy Policy</Link>.
               </label>
             </div>
             <ReCaptcha sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY} onChange={handleCaptchaChange} />

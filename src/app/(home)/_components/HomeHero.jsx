@@ -9,13 +9,15 @@ const HomeHero = () => {
     <section className="home-hero">
       <div className="home-hero__inner container">
         <div className="home-hero__top">
-          <h1 className="fadeInUp">Expert Support for International Business Operations</h1>
+          <h1 className="fadeInUp">
+            Expert Support for International Business Operations
+          </h1>
 
           <div className="content fadeInUp">
             <p>
-              Compliance, legal, and financial solutions for efficient global
-              operations. Get expert help navigating regulations, managing
-              financial flows, and optimising your business.
+              Comprehensive solutions for business setup and coordination across
+              52 jurisdictions. From company formation to banking and ongoing
+              management, we help streamline your operations worldwide.
             </p>
             <RequestButton text={"Request a Consultation"} />
           </div>
