@@ -23,7 +23,7 @@ export default function contactUs() {
             <p>Specialised help for your business.</p>
 
             <Image
-              src="/images/contact-us/Frame195.webp"
+              src="/images/contact-us/contact.webp"
               quality={100}
               width={795}
               height={361}

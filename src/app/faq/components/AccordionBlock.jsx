@@ -60,7 +60,7 @@ const AccordionBlock = () => {
       <div className="accordion-block__inner container">
         <div className="col col-image">
           <Image
-            src="/images/faq/Frame195.webp"
+            src="/images/faq/faq.webp"
             quality={100}
             width={826}
             height={537}

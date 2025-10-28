@@ -21,7 +21,7 @@ export default function solutions() {
       <SolutionsHero />
       <SolutionsLoop />
       <ExpertSupport
-        title={"YOUR BUSINESS, YOUR SOLUTIONS"}
+        title={"YOUR BUSINESS, <br/>YOUR SOLUTIONS"}
         text={
           "Our services are fully customizable to your business needs. Contact us to receive a personalized quote. You can also select additional services to create a solution tailored to your specific business needs. "
         }
