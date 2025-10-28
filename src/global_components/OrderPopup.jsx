@@ -1,5 +1,6 @@
 "use client";
 import React, { useMemo } from "react";
+import Link from "next/link";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { usePopup } from "@/contexts/PopupsContext";
@@ -165,7 +166,10 @@ function RequestPopup() {
           values,
         }) => (
           <div>
-            <div className="overlay" onClick={() => closePopup(resetForm)}></div>
+            <div
+              className="overlay"
+              onClick={() => closePopup(resetForm)}
+            ></div>
             <div className="popup-inner">
               <div className="popup-top">
                 <h2>{serviceValue} Request</h2>
@@ -290,21 +294,23 @@ function RequestPopup() {
                             cursor: "pointer",
                             "&:hover": {
                               backgroundColor: "#47B782", // Светло-зелёный ховер
-                              
                             },
                           }),
                         }}
                         className={`form-field ${
                           touched.country && errors.country ? "invalid" : ""
                         }`}
-                        onChange={(option) => setFieldValue("country", option.value)}
+                        onChange={(option) =>
+                          setFieldValue("country", option.value)
+                        }
                         placeholder="Country"
-                        value={options.find((option) => option.value === values.country)}
+                        value={options.find(
+                          (option) => option.value === values.country
+                        )}
                       />
 
                       {/* <ErrorMessage name="country" component="div" className="error" /> */}
                     </div>
-
 
                     <div>
                       <PhoneInput
@@ -338,7 +344,8 @@ function RequestPopup() {
                           <CheckboxIcon />
                           <span>
                             I agree to the processing of my data according to
-                            the Privacy Policy.
+                            the{" "}
+                            <Link href="/privacy-policy">Privacy Policy</Link>.
                           </span>
                         </span>
                       </label>

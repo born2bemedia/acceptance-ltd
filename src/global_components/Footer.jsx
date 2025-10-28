@@ -18,7 +18,7 @@ const Footer = () => {
 
         <div className="col">
           <div className="menu-primary item">
-            <h3>More about Acceptance LTD</h3>
+            <h3>More about Aceptanta</h3>
 
             <ul>
               <li>
