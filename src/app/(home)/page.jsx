@@ -29,7 +29,7 @@ export default function Home() {
       <ExpertSupport
         title={"Get expert support for your business"}
         text={
-          "Ready to navigate the complexities of compliance, legal services, and financial advisory? Contact us today for a consultation tailored to your industry needs."
+          "Need assistance with your business setup and organization? Contact us today for a consultation tailored to your industry needs."
         }
       />
       <RequestPopup />

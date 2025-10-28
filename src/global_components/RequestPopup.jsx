@@ -9,6 +9,7 @@ import Select from "react-select";
 import useCountryCode from "@/utils/useCountryCode";
 import countryList from "react-select-country-list";
 import { ButtonIcon, CheckboxIcon } from "./Icons";
+import Link from "next/link";
 
 function RequestPopup() {
   const {
@@ -539,7 +540,7 @@ function RequestPopup() {
                               <CheckboxIcon />
                               <span>
                                 I agree to the processing of my data according
-                                to the Privacy Policy.
+                                to the <Link href="/privacy-policy">Privacy Policy</Link>.
                               </span>
                             </span>
                           </label>
