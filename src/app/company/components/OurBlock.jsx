@@ -37,6 +37,14 @@ const OurBlock = () => {
                 operations.
               </p>
             </div>
+            <hr />
+            <div className="item fadeInUp">
+              <p>
+                Aceptanta is a brand operated by Acceptance Solutions Group LLC,
+                ensuring the delivery of services through trusted local
+                specialists and verified partners in each jurisdiction.
+              </p>
+            </div>
           </div>
 
           <RequestButton text={"Connect with the Team"} />
