@@ -193,6 +193,7 @@
 
         .item {
           &:last-child {
+            margin-top: 64px;
             p {
               max-width: 100%;
               margin: 0;
@@ -234,7 +235,7 @@
         }
 
         hr {
-          margin: 64px 0;
+          margin: 46px 0;
           @media (max-width: 768px) {
             margin: 40px 0;
           }
