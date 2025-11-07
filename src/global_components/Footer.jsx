@@ -151,7 +151,7 @@ const Footer = () => {
               </li>
             </ul>
             <div className="copiright">
-              <p>© {currentYear} Acceptance LTD. All rights reserved.</p>
+              <p>© {currentYear} Acceptance Solutions Group LLC. All rights reserved.</p>
             </div>
           </div>
         </div>

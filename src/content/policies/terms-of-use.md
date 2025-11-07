@@ -4,7 +4,7 @@
 
 ### Introduction 
 
-Welcome to Acceptance LTD, operating under the brand Aceptanta. These Terms of Use govern your use of our website and the services provided by Aceptanta. You agree to comply with these terms by accessing or using our website. If you do not agree with any part of these terms, please do not use our services.
+Welcome to Acceptance Solutions Group LLC, operating under the brand Aceptanta. These Terms of Use govern your use of our website and the services provided by Aceptanta. You agree to comply with these terms by accessing or using our website. If you do not agree with any part of these terms, please do not use our services.
 
 Acceptance Solutions Group LLC is a registered company in Nevis, West Indies, with its official address at Hamilton Development, Unit B, Charlestown, Nevis, West Indies. Company registration number: L23233. For any inquiries, please contact us at info@aceptanta.com.
 
@@ -24,7 +24,7 @@ Our Privacy Policy and Cookie Policy will handle your personal information, whic
 Unless stated otherwise, the content found on this website is either created by us or sourced from affiliates of Aceptanta.
 
 All materials on this website, including but not limited to text, graphics, logos, and software, are protected by copyright, trademark, and applicable laws both domestically and internationally. We and our licensors maintain all rights not explicitly granted in these Terms of Use.
-The names “Aceptanta” and any associated logos or product identifiers appearing on this website (collectively referred to as the “Aceptanta Marks”) are trademarks or registered trademarks of Acceptance LTD. You are prohibited from using any Aceptanta Marks without prior written consent from us or as explicitly permitted in these Terms of Use, whether individually or in combination with other terms or design elements, including in any promotional materials, press releases, or other forms of media.
+The names “Aceptanta” and any associated logos or product identifiers appearing on this website (collectively referred to as the “Aceptanta Marks”) are trademarks or registered trademarks of  Acceptance Solutions Group LLC. You are prohibited from using any Aceptanta Marks without prior written consent from us or as explicitly permitted in these Terms of Use, whether individually or in combination with other terms or design elements, including in any promotional materials, press releases, or other forms of media.
 
 References to trademarks belonging to other entities on this website are solely for identification and do not imply any endorsement or approval by those parties of this website or its content. These Terms of Use do not grant you any rights to utilise the trademarks of third parties.
 
@@ -55,7 +55,7 @@ These disclaimers and limitations of liability are enforceable to the maximum ex
 
 ### Additional Terms
 
-If any part of these Terms of Use is deemed invalid or unenforceable in any jurisdiction, then 
+If any part of these Terms of Use is deemed invalid or unenforceable in any jurisdiction, then
 (i) within that jurisdiction, the provision shall be interpreted in a manner that best reflects its original purpose to the fullest extent permitted by law, while the rest of these Terms of Use will remain fully enforceable, and
 
 (ii) in all other jurisdictions, these Terms of Use will continue to be in full effect.

@@ -4,7 +4,7 @@
 
 ### Introduction
 
-This Cookie Policy outlines how Acceptance Solutions Group LLC  ("we," "our," or "us"), operating the Aceptanta brand and website, uses cookies and similar tracking technologies. Acceptance Solutions Group LLC is committed to respecting your privacy and ensuring the proper use of cookies on our website to enhance your experience and provide relevant content.
+This Cookie Policy outlines how Acceptance Solutions Group LLC  ("we," "our," or "us"), operating the Aceptanta brand and website, uses cookies and similar tracking technologies. Acceptance Solutions Group LLC is committed to respecting your privacy and ensuring the proper use of cookies on our website to enhance your experience and provide relevant content
 
 ### What Are Cookies?
 
