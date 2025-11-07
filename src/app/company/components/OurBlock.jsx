@@ -21,7 +21,7 @@ const OurBlock = () => {
         <div className="col">
           <div className="items">
             <div className="item fadeInUp">
-              <h3>Our mission</h3>
+              <h3>Our Mission</h3>
               <p>
                 To provide expert legal, financial, and regulatory solutions,
                 helping e-commerce, IT, startups, and consulting firms operate
@@ -30,7 +30,7 @@ const OurBlock = () => {
             </div>
             <hr />
             <div className="item fadeInUp">
-              <h3>Our vision</h3>
+              <h3>Our Vision</h3>
               <p>
                 To be the trusted partner for businesses across industries,
                 simplifying regulations and ensuring seamless international
