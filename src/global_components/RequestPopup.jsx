@@ -540,7 +540,7 @@ function RequestPopup() {
                               <CheckboxIcon />
                               <span>
                                 I agree to the processing of my data according
-                                to the <Link href="/privacy-policy">Privacy Policy</Link>.
+                                to the <Link href="/privacy-policy" target="_blank">Privacy Policy</Link>.
                               </span>
                             </span>
                           </label>
