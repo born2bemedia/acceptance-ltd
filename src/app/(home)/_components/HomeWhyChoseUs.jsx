@@ -9,7 +9,7 @@ const items = [
   {
     title: "Deep Expertise in CIS and Eastern European Markets",
     description:
-      "Years of experience working with businesses from CIS countries and Eastern Europe give us a unique understanding of regional challenges and opportunities. We tailor solutions to meet your specific needs, ensuring seamless international expansion.",
+      "Years of experience working with businesses from CIS countries and Eastern Europe give us a unique understanding of regional challenges and opportunities. With operations across 52 jurisdictions, we tailor solutions to your specific needs and ensure seamless international expansion.",
   },
   {
     title: "Comprehensive Support from Start to Finish",
@@ -44,7 +44,7 @@ const HomeWhyChoseUs = () => {
     <section className="why-chose-us">
       <div className="why-chose-us__inner container">
         <div className="why-chose-us__top fadeInUp">
-          <h2>Why Choose us</h2>
+          <h2>Why Choose Us</h2>
         </div>
 
         <div className="why-chose-us__content fadeInUp">

@@ -33,7 +33,7 @@ export default function contactUs() {
           </div>
 
           <div className="col col-form">
-            <h2>Why Choose us</h2>
+            <h2>Why Choose Us</h2>
 
             <ContactForm />
 
