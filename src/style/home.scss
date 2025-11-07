@@ -388,6 +388,19 @@
       font-weight: 400;
       line-height: 18.75px;
     }
+
+    .note {
+      opacity: 0.8;
+      color: #0a0a0a;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      border-radius: 0 16px 16px 0;
+      border-left: 4px solid #47b782;
+      background: #fff;
+      padding: 16px;
+    }
   }
 }
 

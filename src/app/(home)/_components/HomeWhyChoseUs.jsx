@@ -30,7 +30,7 @@ const items = [
     title: "Tailored Business Solutions for Global Success",
     description:
       "We offer custom strategies based on your business model and financial flows. From selecting the proper jurisdiction to optimising tax structures, our solutions are designed to minimise risks and maximise efficiency.",
-    note: "Please note: our services do not include investment consulting. All advisory is focused strictly on business setup and operational support through trusted specialists.",
+    note: "<b>Please note:</b> our services do not include investment consulting. All advisory is focused strictly on business setup and operational support through trusted specialists.",
   },
   {
     title: "Strong Relationships with Financial Institutions",
@@ -54,7 +54,7 @@ const HomeWhyChoseUs = () => {
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
                 <br />
-                {item.note && <p className="note">{item.note}</p>}
+                {item.note && <p className="note" dangerouslySetInnerHTML={{ __html: item.note }}></p>}
               </div>
             ))}
           </div>
