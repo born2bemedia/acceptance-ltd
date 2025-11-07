@@ -47,6 +47,11 @@
       }
     }
 
+    a {
+      color: #143F34;
+      font-weight: 500;
+    }
+
     ol {
       margin: 20px 0;
       padding: 0 0 0 25px;
@@ -77,7 +82,7 @@
           a {
             color: #143f34;
             font-size: 18px;
-            font-weight: 600;
+            font-weight: 500;
             line-height: 21px;
             @media (max-width: 768px) {
               font-size: 16px;
