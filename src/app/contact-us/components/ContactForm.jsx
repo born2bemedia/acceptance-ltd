@@ -353,7 +353,7 @@ const ContactForm = () => {
                 className="form-checkbox"
               />
               <label htmlFor="agree">
-                I agree to the processing of my data according to the <Link href="/privacy-policy">Privacy Policy</Link>.
+                I agree to the processing of my data according to the <Link href="/privacy-policy" target="_blank">Privacy Policy</Link>.
               </label>
             </div>
             <ReCaptcha sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY} onChange={handleCaptchaChange} />
