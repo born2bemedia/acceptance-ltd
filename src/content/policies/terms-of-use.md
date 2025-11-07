@@ -8,7 +8,6 @@ Welcome to Acceptance LTD, operating under the brand Aceptanta. These Terms of U
 
 Acceptance Solutions Group LLC is a registered company in Nevis, West Indies, with its official address at Hamilton Development, Unit B, Charlestown, Nevis, West Indies. Company registration number: L23233. For any inquiries, please contact us at info@aceptanta.com.
 
-
 These Terms of Use outline the rules and regulations for using Aceptanta's services, including but not limited to compliance, legal support, and consulting services. We encourage you to read these terms carefully before using our website or engaging with our services.
 
 ### Content Usage, Limitations, and Privacy Policy
@@ -57,15 +56,11 @@ These disclaimers and limitations of liability are enforceable to the maximum ex
 ### Additional Terms
 
 If any part of these Terms of Use is deemed invalid or unenforceable in any jurisdiction, then 
-(i) within that jurisdiction, the provision shall be interpreted in a manner that best reflects its original purpose to the fullest extent permitted by law, while the rest of these Terms of Use will remain fully enforceable, and 
+(i) within that jurisdiction, the provision shall be interpreted in a manner that best reflects its original purpose to the fullest extent permitted by law, while the rest of these Terms of Use will remain fully enforceable, and
 
 (ii) in all other jurisdictions, these Terms of Use will continue to be in full effect.
 
 We reserve the right to update or modify these Terms of Use at any time at our sole discretion. Such changes will be posted on this webpage or a similar location on the website. Unless stated otherwise, these updates will take effect immediately upon being published. You must review this page periodically to stay informed of any changes. By continuing to use the website after such revisions are made, you agree to be bound by the updated Terms of Use.
-
-### Jurisdiction and Governing Law
-
-These Terms of Use, as well as any disputes or claims arising out of or in connection with them or your use of our services, shall be governed and construed by the laws of [ Jurisdiction]. By accessing and using our website or services, you agree that any legal action or proceedings relating to these Terms of Use shall be brought exclusively in the courts of [ Jurisdiction]. We reserve the right to initiate and pursue legal proceedings in the appropriate jurisdiction.
 
 ### Jurisdiction and Governing Law
 
