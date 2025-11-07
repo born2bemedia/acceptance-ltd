@@ -44,7 +44,7 @@ const HomeWhyChoseUs = () => {
     <section className="why-chose-us">
       <div className="why-chose-us__inner container">
         <div className="why-chose-us__top fadeInUp">
-          <h2>Why Choose us</h2>
+          <h2>Why Choose Us</h2>
         </div>
 
         <div className="why-chose-us__content fadeInUp">
