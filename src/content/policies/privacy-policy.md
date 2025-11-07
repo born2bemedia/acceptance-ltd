@@ -2,7 +2,7 @@
 
 ---
 
-At Acceptance LTD (“Aceptanta”), we are committed to protecting your privacy and ensuring that your personal information is handled securely and transparently. Acceptance LTD, the company operating under the brand name Aceptanta, is dedicated to safeguarding your data when you use our services or interact with our website.
+At Acceptance Solutions Group LLC (“Aceptanta”), we are committed to protecting your privacy and ensuring that your personal information is handled securely and transparently. Acceptance Solutions Group LLC, the company operating under the brand name Aceptanta, is dedicated to safeguarding your data when you use our services or interact with our website.
 
 Company Details:
 
