@@ -56,9 +56,11 @@ These disclaimers and limitations of liability are enforceable to the maximum ex
 ### Additional Terms
 
 If any part of these Terms of Use is deemed invalid or unenforceable in any jurisdiction, then
-(i) within that jurisdiction, the provision shall be interpreted in a manner that best reflects its original purpose to the fullest extent permitted by law, while the rest of these Terms of Use will remain fully enforceable, and
 
-(ii) in all other jurisdictions, these Terms of Use will continue to be in full effect.
+<ul class="ul-without">
+<li>(i) within that jurisdiction, the provision shall be interpreted in a manner that best reflects its original purpose to the fullest extent permitted by law, while the rest of these Terms of Use will remain fully enforceable, and</li>
+<li>(ii) in all other jurisdictions, these Terms of Use will continue to be in full effect.</li>
+</ul>
 
 We reserve the right to update or modify these Terms of Use at any time at our sole discretion. Such changes will be posted on this webpage or a similar location on the website. Unless stated otherwise, these updates will take effect immediately upon being published. You must review this page periodically to stay informed of any changes. By continuing to use the website after such revisions are made, you agree to be bound by the updated Terms of Use.
 
